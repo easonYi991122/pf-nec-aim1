@@ -1,0 +1,511 @@
+{
+  "export": "pf-nec-aim1",
+  "files": [
+    {
+      "path": ".gitignore",
+      "rewritten": false,
+      "sha256": "68932c59e2a276febff87d15155b6fe59b69e6c14cc7e70ab2198684a77db241",
+      "source_path": [
+        "03_code/tools/handoff/templates/gitignore"
+      ]
+    },
+    {
+      "path": "AGENTS.md",
+      "rewritten": false,
+      "sha256": "604d161a98f9c5cc6400f5f64b78c662eb0fb996d3e1c5cab4fc97493a4931fd",
+      "source_path": [
+        "03_code/tools/handoff/templates/AGENTS.md"
+      ]
+    },
+    {
+      "path": "CLAUDE.md",
+      "rewritten": false,
+      "sha256": "ecd7a75f3190d4dde9fc2dc3a36a4304b87c04d5c0d2a17073beca209c0d2a31",
+      "source_path": [
+        "03_code/tools/handoff/templates/CLAUDE.md"
+      ]
+    },
+    {
+      "path": "README.md",
+      "rewritten": false,
+      "sha256": "2ae3b4227721ef5b71d711aececeb8aed9a2bc0c6e004077468391d536e34e13",
+      "source_path": [
+        "03_code/tools/handoff/templates/README.md"
+      ]
+    },
+    {
+      "path": "docs/DATA_LAYOUT.md",
+      "rewritten": false,
+      "sha256": "95fd66b429cd2778a31f328c4f9970663255da93c074dbffb5ccf5ae4d98c134",
+      "source_path": [
+        "03_code/tools/handoff/templates/DATA_LAYOUT.md"
+      ]
+    },
+    {
+      "path": "docs/ENVIRONMENT.md",
+      "rewritten": false,
+      "sha256": "74ff9407de22e3182f83aac633407d23439f9344a3e42785c3fce6ea3290a885",
+      "source_path": [
+        "03_code/tools/handoff/templates/ENVIRONMENT.md"
+      ]
+    },
+    {
+      "path": "docs/EVALUATION.md",
+      "rewritten": false,
+      "sha256": "397e1125ad33a6f0996fa3513e2e0416afa66a95407678f8963fab5d594d1818",
+      "source_path": [
+        "03_code/tools/handoff/templates/EVALUATION.md"
+      ]
+    },
+    {
+      "path": "docs/EXCLUDED.md",
+      "rewritten": false,
+      "sha256": "c774bef44c62c3efdf02e399b90b0ada069dee4ae173fa332358eabd49fd09a5",
+      "source_path": [
+        "03_code/tools/handoff/templates/EXCLUDED.md"
+      ]
+    },
+    {
+      "path": "docs/RESULTS.md",
+      "rewritten": false,
+      "sha256": "cc94a78ae89757015da008b2ab099b74e0b74662248dc9d0b979d7ca8b6d2ba4",
+      "source_path": [
+        "03_code/tools/handoff/templates/RESULTS.md"
+      ]
+    },
+    {
+      "path": "docs/TASKS.md",
+      "rewritten": false,
+      "sha256": "801fc02d3dca72fc614f88e9b298233ab076dce6480ac0ba8f026693a6698a8e",
+      "source_path": [
+        "03_code/tools/handoff/templates/TASKS.md"
+      ]
+    },
+    {
+      "path": "env/requirements-linux.txt",
+      "rewritten": false,
+      "sha256": "88efa37bffab54eb417a252daac8c4e2ae6bf4cf9efda605c2cc1a4bb20510b8",
+      "source_path": [
+        "03_code/tools/handoff/templates/requirements-linux.txt"
+      ]
+    },
+    {
+      "path": "env/requirements-mac.txt",
+      "rewritten": true,
+      "sha256": "0e220e5e0e6e068061b810c62f6c7b3aafb7472fef90f583ce7228ab08eea7c2",
+      "source_path": [
+        "generated:local-venv-distribution-metadata"
+      ]
+    },
+    {
+      "path": "explore/README.md",
+      "rewritten": false,
+      "sha256": "9e816b9ee4d03376522afe729a43bdccbdcb6f2a176d9e456ea9b74356dae164",
+      "source_path": [
+        "03_code/tools/handoff/templates/EXPLORE.md"
+      ]
+    },
+    {
+      "path": "pyproject.toml",
+      "rewritten": false,
+      "sha256": "22d8d8c402572db9d613031dd096ee1a6347842f64f097bdc391107f4b51080a",
+      "source_path": [
+        "03_code/tools/handoff/templates/pyproject.toml"
+      ]
+    },
+    {
+      "path": "pytest.ini",
+      "rewritten": false,
+      "sha256": "7bde1a0b2e600d709e1f5be695341db1e131e681af8947ca2aa27117a40e56c1",
+      "source_path": [
+        "03_code/tools/handoff/templates/pytest.ini"
+      ]
+    },
+    {
+      "path": "src/explore/__init__.py",
+      "rewritten": true,
+      "sha256": "d2e23ead7a1d5a8ab4b1d8365e7193032d752c2f1b8207dfab03ba936fe71a08",
+      "source_path": [
+        "generated:package-init"
+      ]
+    },
+    {
+      "path": "src/explore/aim1b/__init__.py",
+      "rewritten": true,
+      "sha256": "d2e23ead7a1d5a8ab4b1d8365e7193032d752c2f1b8207dfab03ba936fe71a08",
+      "source_path": [
+        "generated:package-init"
+      ]
+    },
+    {
+      "path": "src/explore/aim1b/stage12.py",
+      "rewritten": true,
+      "sha256": "d7b5bfa4942d71549c5fdde5575e5356ba674ef2498797ba3b8df0c498df2ff0",
+      "source_path": [
+        "03_code/exp/redo_20261003/aim1b/stage12.py",
+        "03_code/tools/handoff/templates/aim1b12_cli.py"
+      ]
+    },
+    {
+      "path": "src/explore/aim1b/stage34.py",
+      "rewritten": true,
+      "sha256": "06581105f6a7beb9efb9c0a1a8207c7e9390dff08c118345f93e037823a86d55",
+      "source_path": [
+        "03_code/exp/redo_20261003/aim1b/stage34.py",
+        "03_code/tools/handoff/templates/aim1b34_cli.py"
+      ]
+    },
+    {
+      "path": "src/explore/i7/__init__.py",
+      "rewritten": true,
+      "sha256": "d2e23ead7a1d5a8ab4b1d8365e7193032d752c2f1b8207dfab03ba936fe71a08",
+      "source_path": [
+        "generated:package-init"
+      ]
+    },
+    {
+      "path": "src/explore/i7/diagnostics.py",
+      "rewritten": true,
+      "sha256": "e09fc289f12debcec31cdd9cb43bbb1a869bed189b8ee807e5b0b9ef7b344fff",
+      "source_path": [
+        "03_code/exp/redo_20261003/diagnostics_t4.py",
+        "03_code/exp/redo_20261003_hooks_sequence.py",
+        "03_code/tools/handoff/templates/i7_cli.py"
+      ]
+    },
+    {
+      "path": "src/explore/t3/__init__.py",
+      "rewritten": true,
+      "sha256": "d2e23ead7a1d5a8ab4b1d8365e7193032d752c2f1b8207dfab03ba936fe71a08",
+      "source_path": [
+        "generated:package-init"
+      ]
+    },
+    {
+      "path": "src/explore/t3/gsafe_t3.py",
+      "rewritten": false,
+      "sha256": "0147bafa49df8c456d11993afea7d39be5eef4ec9b56d8761d6e260f0f0acba6",
+      "source_path": [
+        "03_code/tools/handoff/templates/t3_hook.py"
+      ]
+    },
+    {
+      "path": "src/explore/t3/interpret.py",
+      "rewritten": true,
+      "sha256": "f19f212ecb4dd3493c0d190f4e305d2c91d3385797928373f995623ca4e0e5f0",
+      "source_path": [
+        "03_code/exp/redo_20261003/interpret.py"
+      ]
+    },
+    {
+      "path": "src/explore/t3/t3_fast.py",
+      "rewritten": true,
+      "sha256": "bb862e3a28cc0d8bf6a8798df3c5255cfe8b7a9e4d6a957ec37b8b366ebd476e",
+      "source_path": [
+        "03_code/exp/redo_20261003/t3_fast.py"
+      ]
+    },
+    {
+      "path": "src/pf_nec/__init__.py",
+      "rewritten": true,
+      "sha256": "d2e23ead7a1d5a8ab4b1d8365e7193032d752c2f1b8207dfab03ba936fe71a08",
+      "source_path": [
+        "generated:package-init"
+      ]
+    },
+    {
+      "path": "src/pf_nec/cli.py",
+      "rewritten": false,
+      "sha256": "90b158c8e9cba981e5f469f302d470ae8a6e8dda6297f32014bfcfdbee092b4f",
+      "source_path": [
+        "03_code/tools/handoff/templates/cli.py"
+      ]
+    },
+    {
+      "path": "src/pf_nec/config.py",
+      "rewritten": false,
+      "sha256": "d62f93997ecf6c53cacb3303a1cf6325844bb1086c7c58657ea54024d5382f1a",
+      "source_path": [
+        "03_code/tools/handoff/templates/config.py"
+      ]
+    },
+    {
+      "path": "src/pf_nec/contract.py",
+      "rewritten": true,
+      "sha256": "a8ce75fa0777d8773bb493a844dd10205294c53addccc783eb71cf0208fab91d",
+      "source_path": [
+        "03_code/exp/redo_20261003/contract.py"
+      ]
+    },
+    {
+      "path": "src/pf_nec/data.py",
+      "rewritten": false,
+      "sha256": "77e85d58ba601fda3e83ac4ac5fae380a372268443f3418a625db960db3419dd",
+      "source_path": [
+        "03_code/tools/handoff/templates/data.py"
+      ]
+    },
+    {
+      "path": "src/pf_nec/evaluate.py",
+      "rewritten": true,
+      "sha256": "cffafba6f809fc8c12cb3dc81fecae7bf77d98c9d8b5224096df562a51a40d6c",
+      "source_path": [
+        "03_code/exp/redo_20261003/evaluate.py"
+      ]
+    },
+    {
+      "path": "src/pf_nec/features.py",
+      "rewritten": true,
+      "sha256": "b2c4d09f10e4b0ca69d7e72a3f75f39adbdd33dbdfd8ea1a12a22a529227e152",
+      "source_path": [
+        "03_code/exp/redo_20261003/features.py"
+      ]
+    },
+    {
+      "path": "src/pf_nec/formal_ids.py",
+      "rewritten": true,
+      "sha256": "3b04ef994b5bc37e359bf187a9c5f66cf95aadec3eb1b28fa85c30ea8a298ee7",
+      "source_path": [
+        "03_code/exp/redo_20261003_hooks_gsafe_t3.py"
+      ]
+    },
+    {
+      "path": "src/pf_nec/gsafe.py",
+      "rewritten": true,
+      "sha256": "585cec0a2238d6b336feaf4141d7644e3b94d5b69b537f2261bd454b7496016a",
+      "source_path": [
+        "03_code/exp/redo_20261003_hooks_gsafe_t3.py"
+      ]
+    },
+    {
+      "path": "src/pf_nec/harness/__init__.py",
+      "rewritten": true,
+      "sha256": "d2e23ead7a1d5a8ab4b1d8365e7193032d752c2f1b8207dfab03ba936fe71a08",
+      "source_path": [
+        "generated:package-init"
+      ]
+    },
+    {
+      "path": "src/pf_nec/harness/harness_v2.py",
+      "rewritten": true,
+      "sha256": "b6d0e45428000ab3ecbaed89e49d562ea180c91d21001781edcc499e52ca641b",
+      "source_path": [
+        "03_code/harness/harness_v2.py"
+      ]
+    },
+    {
+      "path": "src/pf_nec/harness/harness_v3.py",
+      "rewritten": true,
+      "sha256": "cd12a1b77c28b5b97ce70cba51a3a21323d97a3423a7f8161c1ce136426c5b68",
+      "source_path": [
+        "03_code/harness/harness_v3.py"
+      ]
+    },
+    {
+      "path": "src/pf_nec/legacy/__init__.py",
+      "rewritten": true,
+      "sha256": "d2e23ead7a1d5a8ab4b1d8365e7193032d752c2f1b8207dfab03ba936fe71a08",
+      "source_path": [
+        "generated:package-init"
+      ]
+    },
+    {
+      "path": "src/pf_nec/legacy/build_v26.py",
+      "rewritten": true,
+      "sha256": "90895dc13d860c19c5e44d7f64dcc58cf08147372f35402e60fe803ac25aabce",
+      "source_path": [
+        "03_code/features/build_v26.py"
+      ]
+    },
+    {
+      "path": "src/pf_nec/legacy/calib_mle.py",
+      "rewritten": false,
+      "sha256": "98f9df576104185a7e59bae31e87b5720939c473566f3ae0294a2cbd2cf47b82",
+      "source_path": [
+        "03_code/exp/calib/calib_mle.py"
+      ]
+    },
+    {
+      "path": "src/pf_nec/legacy/common.py",
+      "rewritten": true,
+      "sha256": "440f88ea08fce86e3bffa916339fbbf041b5bc5ce5e3b04133cd0e31fa5a9f22",
+      "source_path": [
+        "03_code/exp/nested/common.py"
+      ]
+    },
+    {
+      "path": "src/pf_nec/legacy/core.py",
+      "rewritten": true,
+      "sha256": "a1efb59320ddcf5959b7ecbee7ac1d61081f4dbd444a7fa44e90333719d8eac5",
+      "source_path": [
+        "03_code/exp/pirep/core.py",
+        "03_code/tools/handoff/templates/core_io.py"
+      ]
+    },
+    {
+      "path": "src/pf_nec/legacy/line_R.py",
+      "rewritten": true,
+      "sha256": "d67272d396fb83deaca36eda30bd65373d652c983e030eca69b5991e5753191b",
+      "source_path": [
+        "03_code/exp/nested/line_R.py"
+      ]
+    },
+    {
+      "path": "src/pf_nec/legacy/line_S.py",
+      "rewritten": true,
+      "sha256": "05fa832fa390e88560009eb710a474b7143fde28bd4c797a4916217f37a1ffab",
+      "source_path": [
+        "03_code/exp/nested/line_S.py"
+      ]
+    },
+    {
+      "path": "src/pf_nec/legacy/rebuild_v26.py",
+      "rewritten": true,
+      "sha256": "5c0ff6f9e883aa7f47671a6f4518811ee49cb9aebf9352d132ba93879043fa8c",
+      "source_path": [
+        "03_code/features/rebuild_v26.py"
+      ]
+    },
+    {
+      "path": "src/pf_nec/legacy/transport.py",
+      "rewritten": true,
+      "sha256": "12a89c52fb5ae42a7ed36ff8ee3ea44975d717fa84526a3cf6adf43a7c1bd679",
+      "source_path": [
+        "03_code/exp/pirep/transport.py"
+      ]
+    },
+    {
+      "path": "src/pf_nec/legacy/v26_features.json",
+      "rewritten": false,
+      "sha256": "c0a5ae8d3d89afe0f4cdfe8deb35c69cb1ce8bc1c366d9fcbb73baf34532c4ef",
+      "source_path": [
+        "03_code/features/v26_features.json"
+      ]
+    },
+    {
+      "path": "src/pf_nec/legacy/wp0.py",
+      "rewritten": true,
+      "sha256": "92cd6a908ba9d348952a1261cd835f8919c9d1080e3821c84bcdf876f002681b",
+      "source_path": [
+        "03_code/exp/pirep/wp0_reconcile.py"
+      ]
+    },
+    {
+      "path": "src/pf_nec/run.py",
+      "rewritten": true,
+      "sha256": "9f24f65a428086a68c83e52021fe974f24a6ed826708118ba24c07d61d927ef7",
+      "source_path": [
+        "03_code/exp/redo_20261003/run.py",
+        "03_code/tools/handoff/templates/providers.py"
+      ]
+    },
+    {
+      "path": "src/pf_nec/selectors.py",
+      "rewritten": true,
+      "sha256": "7c3648795a19c78e83dad64a8c0105ed06396fe5cbf676b008dc133dd503bdb5",
+      "source_path": [
+        "03_code/exp/redo_20261003/selectors.py"
+      ]
+    },
+    {
+      "path": "src/pf_nec/spec_v1.json",
+      "rewritten": true,
+      "sha256": "2922c52bce4c3d4a24e41360946cba1bd093a539df242453c3a707069c064286",
+      "source_path": [
+        "03_code/exp/redo_20261003/spec_v1.json"
+      ]
+    },
+    {
+      "path": "src/pf_nec/trees.py",
+      "rewritten": true,
+      "sha256": "271b5c9e01699f54f880e650cb530f46f753b30740a5cb3081bcf21574b54b95",
+      "source_path": [
+        "03_code/exp/redo_20261003/trees.py"
+      ]
+    },
+    {
+      "path": "src/pf_nec/verify.py",
+      "rewritten": false,
+      "sha256": "d879384f1681d5229470e561427686cf257ccdb2bc2c978a075beb5db26f72ef",
+      "source_path": [
+        "03_code/tools/handoff/templates/verify.py"
+      ]
+    },
+    {
+      "path": "src/pf_nec/windows.py",
+      "rewritten": false,
+      "sha256": "7e6dbebcd09bcd20260b94272a3c2d17b0c2891eeacf1698a2204049b0dca9a3",
+      "source_path": [
+        "03_code/exp/redo_20261003/windows.py"
+      ]
+    },
+    {
+      "path": "tests/conftest.py",
+      "rewritten": false,
+      "sha256": "c0a3220ce30806e3d9cf8356e3a7f586b4993b81bb7a745ac537d46e45b1f260",
+      "source_path": [
+        "03_code/tools/handoff/templates/conftest.py"
+      ]
+    },
+    {
+      "path": "tests/test_aim1b.py",
+      "rewritten": true,
+      "sha256": "f156ac2e430f707b490cab2f52bfd66e86d94e1e842993bf88af0bd0b0c3f339",
+      "source_path": [
+        "03_code/exp/redo_20261003/aim1b/tests/test_stage34.py"
+      ]
+    },
+    {
+      "path": "tests/test_data.py",
+      "rewritten": false,
+      "sha256": "3af702e8ae6cf554a551f5471657cf52aaf8c9a5d55c34cb204b9a2837d7fdb0",
+      "source_path": [
+        "03_code/tools/handoff/templates/test_data.py"
+      ]
+    },
+    {
+      "path": "tests/test_evaluator.py",
+      "rewritten": true,
+      "sha256": "4f568c26b3ae04c360afe0628f2e82023f1abffc7e22549775d04bf32731d915",
+      "source_path": [
+        "03_code/exp/redo_20261003/tests/test_evaluate_interpret.py"
+      ]
+    },
+    {
+      "path": "tests/test_explore.py",
+      "rewritten": false,
+      "sha256": "1fbf0f721bce1d9351ab7ce3b5f0e739598115628eb6ed0fd881210bb5aef9f0",
+      "source_path": [
+        "03_code/tools/handoff/templates/test_explore.py"
+      ]
+    },
+    {
+      "path": "tests/test_final.py",
+      "rewritten": false,
+      "sha256": "f88322e157675028ad0fbb4a30402ce7195ee2abe3c1125d57eb705de84d5787",
+      "source_path": [
+        "03_code/tools/handoff/templates/test_final.py"
+      ]
+    },
+    {
+      "path": "tests/test_gsafe.py",
+      "rewritten": true,
+      "sha256": "9a7d4197d1a854975ff39b83f125f98f72171356b10f78e603a0682faaa59d83",
+      "source_path": [
+        "03_code/exp/redo_20261003/tests/test_hooks_gsafe_t3.py",
+        "03_code/tools/handoff/templates/synthetic_engine.py"
+      ]
+    },
+    {
+      "path": "tests/test_t3_fast.py",
+      "rewritten": true,
+      "sha256": "d2333a4bb75c847b64da34d08dcd38a3830f20a32570d06f6beae8a16f244609",
+      "source_path": [
+        "03_code/exp/redo_20261003/tests/test_t3_fast.py"
+      ]
+    }
+  ],
+  "manifest_self_excluded": true,
+  "schema": 1,
+  "version": "RX-H1-v1"
+}

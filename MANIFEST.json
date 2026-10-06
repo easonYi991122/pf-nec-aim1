@@ -26,9 +26,17 @@
       ]
     },
     {
+      "path": "README.en.md",
+      "rewritten": false,
+      "sha256": "28cf1e73e899be0b84978b0b2760a416cb05cc29f364f5a9d49e8ebe8755d175",
+      "source_path": [
+        "03_code/tools/handoff/templates/README.en.md"
+      ]
+    },
+    {
       "path": "README.md",
       "rewritten": false,
-      "sha256": "2ae3b4227721ef5b71d711aececeb8aed9a2bc0c6e004077468391d536e34e13",
+      "sha256": "ec929f299560c458600938267ca0abf6ef45336340217ce241575c3998cd4116",
       "source_path": [
         "03_code/tools/handoff/templates/README.md"
       ]
@@ -60,7 +68,7 @@
     {
       "path": "docs/EXCLUDED.md",
       "rewritten": false,
-      "sha256": "c774bef44c62c3efdf02e399b90b0ada069dee4ae173fa332358eabd49fd09a5",
+      "sha256": "2d5c081446c68be006b71b3c3f191ecb7f342bde8b2a61ddc479ac9e33b3cd52",
       "source_path": [
         "03_code/tools/handoff/templates/EXCLUDED.md"
       ]

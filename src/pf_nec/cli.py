@@ -55,8 +55,8 @@ def train(model, repeat, fold=-1):
     return result
 
 
-def evaluate(model, repeats, *, harness=False):
-    """Use frozen row scoring; full Task A repeats require all five OOF folds."""
+def load_evaluation_inputs(model, repeats):
+    """Load independent targets and saved predictions, without fitting."""
     config.require_data()
     config.initialize()
     c.reset_threads()
@@ -73,6 +73,14 @@ def evaluate(model, repeats, *, harness=False):
             gc.collect()
     targets = pd.concat(expected, ignore_index=True)
     predictions = pd.concat(predicted, ignore_index=True)
+    ev.align_predictions(targets, {model: predictions}, frame=frame)
+    return targets, predictions
+
+
+def evaluate(model, repeats, *, harness=False, descriptive_ci=False):
+    """Use frozen row scoring; full Task A repeats require all five OOF folds."""
+    targets, predictions = load_evaluation_inputs(model, repeats)
+    frame = "A-formal" if model.startswith("A-") else "PI72-CLEAN"
     rows, aligned = ev.align_predictions(targets, {model: predictions}, frame=frame)
     per_repeat = {str(r): ev.score_rows(rows.loc[rows.repeat.eq(r)], aligned[model][rows.repeat.eq(r)], frame=frame)
                   for r in repeats}
@@ -82,6 +90,9 @@ def evaluate(model, repeats, *, harness=False):
     result = {"model": model, "frame": frame, "repeats": repeats, "per_repeat": per_repeat,
               "equal_repeat_mean": mean, "promotion_assessed": False,
               "note": "Final reference reproduction; no reduced-family promotion claim"}
+    if descriptive_ci:
+        from .inference import single_arm_intervals
+        result["descriptive_ci"] = single_arm_intervals(targets, predictions, frame=frame, model=model)
     if harness:
         if frame != "A-formal":
             raise c.ContractError("harness_v3 applies only to the Task A contract here")
@@ -109,6 +120,7 @@ def main(argv=None):
     score.add_argument("--model", choices=MODELS, required=True)
     score.add_argument("--repeats", type=int, nargs="+", required=True)
     score.add_argument("--harness", action="store_true")
+    score.add_argument("--descriptive-ci", action="store_true")
     args = parser.parse_args(argv)
     if args.command == "build-data":
         from .data import build_frames
@@ -118,7 +130,7 @@ def main(argv=None):
     elif args.command == "train":
         result = train(args.model, args.repeat, args.fold)
     else:
-        result = evaluate(args.model, args.repeats, harness=args.harness)
+        result = evaluate(args.model, args.repeats, harness=args.harness, descriptive_ci=args.descriptive_ci)
     print(json.dumps(result, ensure_ascii=False, allow_nan=False, indent=2))
 
 

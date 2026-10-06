@@ -2,7 +2,7 @@
 
 No data loading, fitting, registration or file writes occur here. Public tables
 use repeat/row_key/stay/y/pod/case; rename source columns explicitly upstream.
-Task A additionally supplies fold (0..4). See the RX-I4 README for the API.
+Task A additionally supplies fold (0..4). See docs/EVALUATION.md and docs/en/EVALUATION.md for examples.
 """
 from collections import Counter
 import hashlib

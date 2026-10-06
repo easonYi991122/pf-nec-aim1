@@ -1,4 +1,4 @@
-"""Non-promoted Aim 1b trial scaffolds and treatment-positivity diagnostics."""
+"""Exploratory Aim 1b trial scaffolds and treatment-positivity diagnostics."""
 from collections import Counter, defaultdict
 from datetime import datetime, timedelta, timezone
 import csv
@@ -540,6 +540,42 @@ def run_diagnostics(tables, expected_a1=None, pods=PODS, graces=GRACES):
             'diagnostics': diagnostics}
 
 
+CARD_FEATURES = {
+    'arterial_5': ['ArterialLine_5', 'ArterialLine_5_since_index_days_cumsum'],
+    'arterial_1': ['ArterialLine_1', 'ArterialLine_1_since_index_days_cumsum'],
+    'arterial_4': ['ArterialLine_4'],
+    'extubation': ['mechvent', 'mechvent_since_index_days_cumsum', 'offmechvent_since_index_days_cumsum'],
+    'sternal_closure': ['closedsternum_since_index_days_cumsum', 'opensternum',
+                        'opensternum_since_index_days_cumsum', 'suppS_sternum_current_run_days',
+                        'suppS_sternum_days_since_weaning'],
+    'OR_extubation': ['opextubateyn'],
+    'RSVISmilrin': ['rsmilrin', 'rsvismilrin', 'supp_VIS__milrin_last_observed'],
+    'RSVISdopa': ['rsdopa', 'rsvisdopa'],
+    'RSVISepi': ['rsepi', 'rsvisepi'],
+    'RSVISnorepi': ['rsnorepi', 'rsvisnorepi'],
+    'RSVISdobut': ['rsdobut', 'rsvisdobut'],
+    'RSVISvasopress': ['rsvasopress', 'rsvisvasopress'],
+    'milrinone_ICU_entry': ['rsmilrin', 'rsvismilrin'],
+}
+
+
+S_RISK = {
+    'arterial_5': '高：导管依赖循环、灌注/采血需求与病情改善共同决定拔线和NEC；替代线未认证。',
+    'arterial_1': '高：恢复速度、侵入监测需求及并存导管；拔一根不等于取消全部监测。',
+    'arterial_4': '很高：特殊解剖、术式和重症支持决定部位选择；code4不是中心静脉线。',
+    'extubation': '很高：呼吸/循环准备度、镇静和残余病变未测；通气终点可含观察边界。',
+    'sternal_closure': '很高：水肿、出血、循环稳定性和残余病变未测；关闭是治疗响应标记。',
+    'OR_extubation': '很高：术式、麻醉与拔管准备度选择；合并标记还受术后立即失败影响。',
+    'RSVISmilrin': '很高：此前剂量、低灌注、肾功能、LCOS与治疗响应；在用不能表示启动/减量。',
+    'RSVISdopa': '很高：中心照护、适应证、此前剂量及联合用药；无用药者可根本无治疗需要。',
+    'RSVISepi': '很高：救治指征、低心排与联合支持；低归因不代表无临床意义。',
+    'RSVISnorepi': '很高：血管张力、感染、灌注和救治选择；未测适应证不能靠倾向模型补足。',
+    'RSVISdobut': '很高：心功能、血流动力学和替代药选择；快照不是随机救治分配。',
+    'RSVISvasopress': '很高：救治响应及单位冲突；不能用不可靠剂量定义可执行策略。',
+    'milrinone_ICU_entry': '很高：首2h峰VIS剂量在入科后形成，混入治疗响应与择峰过程。',
+}
+
+
 def csv_rows(path):
     with Path(path).open(encoding='utf-8-sig', newline='') as f:
         return list(csv.DictReader(f))
@@ -738,6 +774,28 @@ def draft_dag(card):
             'time_varying_note': 'H→L→A→L+→A+；今日L可受既往治疗影响，普通调整所有每日值不能代替纵向g方法。',
             'strategy_specific_confounding': card['additional_confounds'],
             'measurement_note': '倾向模型拟合Z的已观察分布，不证明A可干预、无未测混杂或Z=A。每条箭头均为草案。'}
+
+
+RANK_ORDER = ('sternal_closure', 'arterial_1', 'arterial_5', 'extubation', 'arterial_4',
+              'OR_extubation', 'RSVISmilrin', 'RSVISdopa', 'milrinone_ICU_entry',
+              'RSVISepi', 'RSVISnorepi', 'RSVISdobut', 'RSVISvasopress')
+
+
+RANK_REASONS = {
+    'arterial_1': '条件性备选候选：保留原keep，指定部位动作可修改、终点可测，资格/事件资源较多；但固定参照存在明显倾向尾部与加权后不平衡，需认证真拔除/替代线及共同适应证，不能直接推进效应估计。',
+    'extubation': '保留但后置：临床动作和预测证据都强，中心双臂多；然而早期一日宽限的未截尾ESS严重坍缩，不能因SHAP高而升主/备。准备度、镇静及记录边界仍须解锁。',
+    'arterial_5': '继续保留keep：临床导管动作值得讨论，不因SHAP较弱而降出候选库。首段留置较早结束，后期风险集/事件与中心双臂支持需逐日看。',
+    'sternal_closure': '优先讨论主候选：临床关闭动作可修改、日期可测，固定参照的两种宽限均有较好已测重叠；事件较外周线少，尚不能保证功效。POD1表现较差，不冻结最佳日；准备度、水肿/出血及复开胸造成很高S风险。',
+    'arterial_4': '保留maybe：部位选择受特殊解剖和重症支持影响，可比范围可能更窄；不可借用外周线SHAP或解释为中心静脉线。',
+    'OR_extubation': '后置：临床可改变，但合并OR/on-arrival标记不能认证动作地点及共同时间零；即使中心有两种标记也不是纯OR策略支持。',
+    'RSVISmilrin': '仅快照对照：动作不可观察；须补24h减量/维持、共同既往剂量及适应证。当前p反映快照持续性，不是随机减量可行性。',
+    'RSVISdopa': '仅快照对照：动作不可观察且中心用药差异显著；既往剂量、适应证及观测选择可支配重叠。',
+    'milrinone_ICU_entry': '独立保留、当前不推进：首2h峰值形成于分配后，不能当入科即时治疗；不可与24h问题合并。',
+    'RSVISepi': '临床题目保留：需先定义共同救治阈值与可替代方案，低SHAP不是排除理由。',
+    'RSVISnorepi': '临床题目保留：缺少动作轨迹、指征和血流动力学趋势，尚不能认证策略。',
+    'RSVISdobut': '临床题目保留：原快照测量与临床共同指征需补证；部分稳定性未专门汇总不记为零。',
+    'RSVISvasopress': '临床题目保留：先解决单位冲突及真实动作定义；当前不得推进剂量策略。',
+}
 
 
 def rank_cards(cards, diagnostics):

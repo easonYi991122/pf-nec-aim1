@@ -1,5 +1,5 @@
 # Python 3.12.3; direct export dependencies from accepted server setup record.
-# CUDA torch installation source is environment-specific; no automatic substitute.
+# Install the matching official torch wheel first; see docs/en/ENVIRONMENT.md.
 numpy==2.0.2
 pandas==2.3.3
 pyarrow==21.0.0

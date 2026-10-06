@@ -1,24 +1,56 @@
-# 环境与算力
+# 环境安装与资源
 
-使用过的环境：Mac M4、16 GB、Python 3.9.6 venv；Linux服务器、Python 3.12.3；Windows RTX 4060供历史序列尝试使用。本包最终模型使用CPU。资源计量依赖Unix的`resource`模块，Windows原生Python入口需先适配；本次未做此适配或Windows运行验证。
+〔事实〕已有运行环境：Mac M4、16 GB、Python 3.9.6；Linux Python 3.12.3。本包最终模型使用 CPU。以下从空 venv 开始，假定相应 Python 已安装且 shell 位于仓库根；将占位路径换为有权限的私有目录。这些是给获授权队友的安装命令，本次修订未联网安装、未验收全新环境或 Linux。
 
-`env/requirements-mac.txt` 是本次本机venv实际安装包的名称／版本快照。`env/requirements-linux.txt` 取自服务器2026-10-04环境记录，列出导出路径所需的直接依赖；未声称取得完整传递依赖锁文件。Linux torch为2.8.0+cu128；其安装源及CPU替代是否可用由队友的环境管理决定，任何替代都要重新验证数值一致性。
+## Mac
 
-Mac需在LightGBM之前导入torch以加载libomp。入口调用 `contract.reset_threads()`，将torch、Arrow、BLAS及learner线程设为2。16 GB机器默认顺序执行；单进程RSS上限8 GiB。长任务建议由队友的agent根据自己OS使用外层资源监视，不要改模型配置解决内存不足。
+〔建议〕匹配 Python 3.9.6，使用实际包版本快照 `env/requirements-mac.txt`；快照包含历史工具包，不是最小依赖锁。Mac 在 LightGBM 前导入 torch，加载 libomp；入口已这样处理。
 
-RX-H1在上述Mac顺序运行、每进程2数值线程的实测：
+```sh
+export PF_ENV=/private/pf-nec-venv
+python3.9 -m venv "$PF_ENV"
+. "$PF_ENV/bin/activate"
+python -m pip install -r env/requirements-mac.txt
+export PYTHONPATH=src
+export PYTHONDONTWRITEBYTECODE=1
+export PF_DATA_ROOT=/authorized/pc4
+export PF_CACHE_ROOT=/private/pf-nec-cache
+export PF_RUN_DIR=/private/pf-nec-cache/runs
+python -c 'import torch; import lightgbm; print(torch.__version__, lightgbm.__version__)'
+python -m pytest -p no:cacheprovider --basetemp="$PF_CACHE_ROOT/test-temp"
+python -m pf_nec.verify
+```
 
-|步骤|墙钟时间|峰值RSS|验证范围|
+## Linux
+
+〔建议〕匹配 Python 3.12.3。原记录的 torch 为 2.8.0+cu128；先从对应官方 wheel 源安装，再安装其余锁定直接依赖。CPU wheel 替代或版本升级应建立新环境并重新核对数值，不在本手册中默认为等价。Linux 文件只锁定直接依赖，不是完整传递依赖快照。
+
+```sh
+export PF_ENV=/private/pf-nec-venv
+python3.12 -m venv "$PF_ENV"
+. "$PF_ENV/bin/activate"
+python -m pip install 'torch==2.8.0+cu128' --index-url https://download.pytorch.org/whl/cu128
+python -m pip install -r env/requirements-linux.txt
+export PYTHONPATH=src
+export PYTHONDONTWRITEBYTECODE=1
+export PF_DATA_ROOT=/authorized/pc4
+export PF_CACHE_ROOT=/private/pf-nec-cache
+export PF_RUN_DIR=/private/pf-nec-cache/runs
+python -c 'import torch; import lightgbm; print(torch.__version__, lightgbm.__version__)'
+python -m pytest -p no:cacheprovider --basetemp="$PF_CACHE_ROOT/test-temp"
+python -m pf_nec.verify
+```
+
+## 执行和历史计时
+
+〔事实〕入口将数值线程设为 2，单进程 RSS 上限为 8 GiB；顺序运行。资源保护使用 Unix 的 resource 模块，Windows 原生入口尚未适配。不要靠删重复、改菜单或改模型配置处理资源不足。
+
+H1 的实测（内部 `h1/report.md` 和等价性回执，不随包分发；关键数字已摘入）：
+
+|步骤|墙钟|峰值 RSS|检查范围|
 |---|---|---|---|
-|从clean及20张原始表新建全部私有特征／划分|157秒|2.47 GiB|13表逐值、类型、帧hash一致；另核对formal population digest|
-|A-D5-LGB，r0/f0|146秒|3.11 GiB|61,386预测最大绝对差6.94×10⁻¹⁸；模型文本逐字节一致|
-|GSAFE-LGB，r1外测|15.6秒|1.34 GiB|6,787预测完全一致，最大绝对差0|
-|无真实数据测试|约55秒|未作为性能基准记录|112项通过|
+|从 clean 和 20 表构建|156.9 秒|2.47 GiB|13 张输出表逐值、类型与帧 hash 一致|
+|A-D5-LGB r0/f0|146.5 秒|3.11 GiB|61,386 预测最大绝对差 6.94e-18；模型文本逐字节一致|
+|GSAFE-LGB r1|15.6 秒|1.34 GiB|6,787 预测完全一致|
 
-上述训练时间包含启动和输入装载，内存由单一worker的峰值RSS计量。A的143轮、G-safe的154轮、训练绑定及参数均与参照相同。A参照环境Python 3.12.3，本次Python 3.9.6；相同模型文本下的极小预测差符合浮点求值舍入量级。
-
-单个外层上下文包含三次内层早停和一次外层重拟合；完整Task A是25个上下文，PI每模型5个上下文。按本次一个上下文线性估算，A全量训练约61分钟，G-safe五次约1.3分钟；这是排期估算，未实测全量，停止轮数和并发会改变耗时。D5-safe的历史r1回执记录4次拟合共约6秒（不含装载，秒级记录），本次未另跑该模型计时；可先为五次复现预留数分钟并在目标机器计量。特征构建约3分钟只需执行一次；完整评价／2000次bootstrap耗时未计量。来源为H1等价性回执及原r1拟合ledger。
-
-Linux参考的A-D5-LGB r0/f0四次拟合本体共约31秒，不含装载和外部作业等待；来源是已导入的该上下文ledger及Python 3.12.3版本回执。它与上表Mac端到端计时口径不同。本次未在Linux或Windows执行新基准，Windows历史GPU耗时不适用于本包CPU最终模型。
-
-测试不读取真实数据；无需在复现时安装历史GPU模型、队列或远端调度工具。
+A 的极小差异 **consistent with rounding（与浮点舍入相容）**，不是仅凭差异大小证明原因。H1 没有重跑全部重复；本次修订的检查也不构成完整三模型重训或跨平台验证。〔建议〕长任务另设资源监视；输入构建仅一次，训练需保留 CACHE 与 RUN 的完整绑定。

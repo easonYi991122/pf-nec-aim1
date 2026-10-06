@@ -1,4 +1,4 @@
-"""Non-promoted I7 slices and learning-curve methods; excluded source-model curves are not fitted."""
+"""Exploratory I7 slices and learning-curve methods; excluded source-model curves are not fitted."""
 from dataclasses import dataclass, replace
 from pathlib import Path
 import gc

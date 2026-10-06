@@ -1,4 +1,4 @@
-"""Non-promoted Aim 1b measurement scaffolding; no causal-effect fit."""
+"""Exploratory Aim 1b measurement scaffolding; no causal-effect fit."""
 from collections import Counter, defaultdict
 import csv
 from datetime import datetime, timedelta, timezone

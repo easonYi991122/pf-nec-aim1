@@ -10,9 +10,17 @@
       ]
     },
     {
+      "path": "AGENTS.en.md",
+      "rewritten": false,
+      "sha256": "89bb7e3efd3bc9364eae39534e8016aef38b76254f80590da1a6eecaf1d1f4f0",
+      "source_path": [
+        "03_code/tools/handoff/templates/AGENTS.en.md"
+      ]
+    },
+    {
       "path": "AGENTS.md",
       "rewritten": false,
-      "sha256": "604d161a98f9c5cc6400f5f64b78c662eb0fb996d3e1c5cab4fc97493a4931fd",
+      "sha256": "c5fa5e6ffdd3e7026645a8c8658ae3525c425d88f4a61a3b9305f6bb5a8ed36b",
       "source_path": [
         "03_code/tools/handoff/templates/AGENTS.md"
       ]
@@ -20,7 +28,7 @@
     {
       "path": "CLAUDE.md",
       "rewritten": false,
-      "sha256": "ecd7a75f3190d4dde9fc2dc3a36a4304b87c04d5c0d2a17073beca209c0d2a31",
+      "sha256": "6ce433f6e93bd154686d4de1e39dd9f073e09d2745e85cb8a81ba84b7276b9b7",
       "source_path": [
         "03_code/tools/handoff/templates/CLAUDE.md"
       ]
@@ -28,7 +36,7 @@
     {
       "path": "README.en.md",
       "rewritten": false,
-      "sha256": "28cf1e73e899be0b84978b0b2760a416cb05cc29f364f5a9d49e8ebe8755d175",
+      "sha256": "181a1ac251ef419daf3e10240a6f3d4c245d849a130fc8c2fa2521735b63f9d0",
       "source_path": [
         "03_code/tools/handoff/templates/README.en.md"
       ]
@@ -36,7 +44,7 @@
     {
       "path": "README.md",
       "rewritten": false,
-      "sha256": "ec929f299560c458600938267ca0abf6ef45336340217ce241575c3998cd4116",
+      "sha256": "9cc32be4a3c8c277c38768c2f927565c981c8f8055fc95ee187d6358273288ed",
       "source_path": [
         "03_code/tools/handoff/templates/README.md"
       ]
@@ -44,7 +52,7 @@
     {
       "path": "docs/DATA_LAYOUT.md",
       "rewritten": false,
-      "sha256": "95fd66b429cd2778a31f328c4f9970663255da93c074dbffb5ccf5ae4d98c134",
+      "sha256": "6cd32733671762770e3381190c99960e4fd25059ab98f4a67170da28e228c2a6",
       "source_path": [
         "03_code/tools/handoff/templates/DATA_LAYOUT.md"
       ]
@@ -52,7 +60,7 @@
     {
       "path": "docs/ENVIRONMENT.md",
       "rewritten": false,
-      "sha256": "74ff9407de22e3182f83aac633407d23439f9344a3e42785c3fce6ea3290a885",
+      "sha256": "8fe50e8e7d41cd8e56e002e32683953977a8acd294d226cc8dbabfa6ca47a667",
       "source_path": [
         "03_code/tools/handoff/templates/ENVIRONMENT.md"
       ]
@@ -60,7 +68,7 @@
     {
       "path": "docs/EVALUATION.md",
       "rewritten": false,
-      "sha256": "397e1125ad33a6f0996fa3513e2e0416afa66a95407678f8963fab5d594d1818",
+      "sha256": "fc2ae752b861ffa5aebd1fad6ee77da81d20e6740f9571e7e912f280ad5e662c",
       "source_path": [
         "03_code/tools/handoff/templates/EVALUATION.md"
       ]
@@ -68,31 +76,127 @@
     {
       "path": "docs/EXCLUDED.md",
       "rewritten": false,
-      "sha256": "2d5c081446c68be006b71b3c3f191ecb7f342bde8b2a61ddc479ac9e33b3cd52",
+      "sha256": "933561055050dfc249d212eb70b2eec75dd09113f9d54c5db9565a1b10c16528",
       "source_path": [
         "03_code/tools/handoff/templates/EXCLUDED.md"
       ]
     },
     {
+      "path": "docs/GLOSSARY.md",
+      "rewritten": false,
+      "sha256": "0f719ea139c59086b8d673bd59d8dcfdda29f398f25f2bce590f162dd99f262d",
+      "source_path": [
+        "03_code/tools/handoff/templates/GLOSSARY.md"
+      ]
+    },
+    {
+      "path": "docs/REFERENCES.md",
+      "rewritten": false,
+      "sha256": "c2536425af2a33a68a8c388311e7355c9b6c6b37afdc711642367a7b709454f8",
+      "source_path": [
+        "03_code/tools/handoff/templates/REFERENCES.md"
+      ]
+    },
+    {
       "path": "docs/RESULTS.md",
       "rewritten": false,
-      "sha256": "cc94a78ae89757015da008b2ab099b74e0b74662248dc9d0b979d7ca8b6d2ba4",
+      "sha256": "fa3b0f3bbf2d1c497ba1a2c217385b247455679344b5a1363627a7cf9a6a3269",
       "source_path": [
         "03_code/tools/handoff/templates/RESULTS.md"
       ]
     },
     {
+      "path": "docs/STATUS_AND_NEXT.md",
+      "rewritten": false,
+      "sha256": "efdadbd325560e8ee74cf82fb4cac5bbb497b00d7dde2b5ba62d436a04e07ada",
+      "source_path": [
+        "03_code/tools/handoff/templates/STATUS_AND_NEXT.md"
+      ]
+    },
+    {
       "path": "docs/TASKS.md",
       "rewritten": false,
-      "sha256": "801fc02d3dca72fc614f88e9b298233ab076dce6480ac0ba8f026693a6698a8e",
+      "sha256": "990b14c7de816e1819d0e20135f6215ea9bd6b094787375d3300b4f85d81bd68",
       "source_path": [
         "03_code/tools/handoff/templates/TASKS.md"
       ]
     },
     {
+      "path": "docs/en/DATA_LAYOUT.md",
+      "rewritten": false,
+      "sha256": "116d31dd15fa01c5ffaa2bc6f0e1c8676e15677fcd0d9214331cdd8922554440",
+      "source_path": [
+        "03_code/tools/handoff/templates/DATA_LAYOUT.en.md"
+      ]
+    },
+    {
+      "path": "docs/en/ENVIRONMENT.md",
+      "rewritten": false,
+      "sha256": "21313a6185fa87ff746e058b0a9eb092a23fbb403cba0aac06775823ae08b7ae",
+      "source_path": [
+        "03_code/tools/handoff/templates/ENVIRONMENT.en.md"
+      ]
+    },
+    {
+      "path": "docs/en/EVALUATION.md",
+      "rewritten": false,
+      "sha256": "5b87014dca31e04f3d85cee0cc41f93d33e8c820ecbcc2f9688fc06d00a12801",
+      "source_path": [
+        "03_code/tools/handoff/templates/EVALUATION.en.md"
+      ]
+    },
+    {
+      "path": "docs/en/EXCLUDED.md",
+      "rewritten": false,
+      "sha256": "81c5719e8594bb3bc7e39a421a476b536395c429ed9c7e048cd3a6b4fa1878cb",
+      "source_path": [
+        "03_code/tools/handoff/templates/EXCLUDED.en.md"
+      ]
+    },
+    {
+      "path": "docs/en/GLOSSARY.md",
+      "rewritten": false,
+      "sha256": "497831312f5083dfcd1d72b5b01cc0c8222df70af5da0d1bbe0b71c14cfdca32",
+      "source_path": [
+        "03_code/tools/handoff/templates/GLOSSARY.en.md"
+      ]
+    },
+    {
+      "path": "docs/en/REFERENCES.md",
+      "rewritten": false,
+      "sha256": "ba177ab4f8c113ccdb96bc01e1f1c9e956ba9f730c816dc2070924744bf6c4f0",
+      "source_path": [
+        "03_code/tools/handoff/templates/REFERENCES.en.md"
+      ]
+    },
+    {
+      "path": "docs/en/RESULTS.md",
+      "rewritten": false,
+      "sha256": "844038507a58a35866d407dc2f5aebc0519034f61a7fa18a486ff829176a5695",
+      "source_path": [
+        "03_code/tools/handoff/templates/RESULTS.en.md"
+      ]
+    },
+    {
+      "path": "docs/en/STATUS_AND_NEXT.md",
+      "rewritten": false,
+      "sha256": "193c3d95e76b55feb85937e93c41258df37614b9e2e00d9eaf6f8bc316c5f8e1",
+      "source_path": [
+        "03_code/tools/handoff/templates/STATUS_AND_NEXT.en.md"
+      ]
+    },
+    {
+      "path": "docs/en/TASKS.md",
+      "rewritten": false,
+      "sha256": "8f4858ee2aed756b8f733f046df17dcb67121ae2be0150277ed5cc4d5c2028b1",
+      "source_path": [
+        "03_code/tools/handoff/templates/TASKS.en.md"
+      ]
+    },
+    {
       "path": "env/requirements-linux.txt",
       "rewritten": false,
-      "sha256": "88efa37bffab54eb417a252daac8c4e2ae6bf4cf9efda605c2cc1a4bb20510b8",
+      "sha256": "afeb9b9a5e1edbcae1319871989fdd726e9143518d775ea1828d12416d831145",
       "source_path": [
         "03_code/tools/handoff/templates/requirements-linux.txt"
       ]
@@ -106,9 +210,17 @@
       ]
     },
     {
+      "path": "explore/README.en.md",
+      "rewritten": false,
+      "sha256": "84a4f53b338b20e35a17f44515a6f91797b829af395daf03f3ec712c244dfa91",
+      "source_path": [
+        "03_code/tools/handoff/templates/EXPLORE.en.md"
+      ]
+    },
+    {
       "path": "explore/README.md",
       "rewritten": false,
-      "sha256": "9e816b9ee4d03376522afe729a43bdccbdcb6f2a176d9e456ea9b74356dae164",
+      "sha256": "95b5a7d713c633e34bc34b926cbea23ab4c9eeab234dc5330ca0e9fe3e97eb27",
       "source_path": [
         "03_code/tools/handoff/templates/EXPLORE.md"
       ]
@@ -148,7 +260,7 @@
     {
       "path": "src/explore/aim1b/stage12.py",
       "rewritten": true,
-      "sha256": "d7b5bfa4942d71549c5fdde5575e5356ba674ef2498797ba3b8df0c498df2ff0",
+      "sha256": "fe0302584cc062cfc7f7091e8f43e2d62bf9cb304b1aca1483e7d65d6e5f5abf",
       "source_path": [
         "03_code/exp/redo_20261003/aim1b/stage12.py",
         "03_code/tools/handoff/templates/aim1b12_cli.py"
@@ -157,7 +269,7 @@
     {
       "path": "src/explore/aim1b/stage34.py",
       "rewritten": true,
-      "sha256": "06581105f6a7beb9efb9c0a1a8207c7e9390dff08c118345f93e037823a86d55",
+      "sha256": "cb1784d56cf31ab0559e8df1c4fd55a8e089c1a4aa25de578abebf2f9787fd58",
       "source_path": [
         "03_code/exp/redo_20261003/aim1b/stage34.py",
         "03_code/tools/handoff/templates/aim1b34_cli.py"
@@ -174,7 +286,7 @@
     {
       "path": "src/explore/i7/diagnostics.py",
       "rewritten": true,
-      "sha256": "e09fc289f12debcec31cdd9cb43bbb1a869bed189b8ee807e5b0b9ef7b344fff",
+      "sha256": "a087b0f5d48404641668fab7425a8156548e57acca9e955c2cc2ab0dbca717a5",
       "source_path": [
         "03_code/exp/redo_20261003/diagnostics_t4.py",
         "03_code/exp/redo_20261003_hooks_sequence.py",
@@ -224,7 +336,7 @@
     {
       "path": "src/pf_nec/cli.py",
       "rewritten": false,
-      "sha256": "90b158c8e9cba981e5f469f302d470ae8a6e8dda6297f32014bfcfdbee092b4f",
+      "sha256": "1f70118ff6af3478646e6253c398fd3af14a4ba20084b021fef76be804aa6505",
       "source_path": [
         "03_code/tools/handoff/templates/cli.py"
       ]
@@ -256,7 +368,7 @@
     {
       "path": "src/pf_nec/evaluate.py",
       "rewritten": true,
-      "sha256": "cffafba6f809fc8c12cb3dc81fecae7bf77d98c9d8b5224096df562a51a40d6c",
+      "sha256": "3c455bb1f2b1f9209ba3805d113a964ea57c67d0e7c9cc78e1dde82c007ff94b",
       "source_path": [
         "03_code/exp/redo_20261003/evaluate.py"
       ]
@@ -307,6 +419,14 @@
       "sha256": "cd12a1b77c28b5b97ce70cba51a3a21323d97a3423a7f8161c1ce136426c5b68",
       "source_path": [
         "03_code/harness/harness_v3.py"
+      ]
+    },
+    {
+      "path": "src/pf_nec/inference.py",
+      "rewritten": false,
+      "sha256": "5dbfdb4120261deb781cbfe3152c15624cdcb202550e261d3c5111838723712b",
+      "source_path": [
+        "03_code/tools/handoff/templates/inference.py"
       ]
     },
     {
@@ -472,6 +592,14 @@
       ]
     },
     {
+      "path": "tests/test_doc_examples.py",
+      "rewritten": false,
+      "sha256": "8db6ddefdc2480d7fdd0c3f327c54afe778904fdfb836bf17ebdac2aeadbf70e",
+      "source_path": [
+        "03_code/tools/handoff/templates/test_doc_examples.py"
+      ]
+    },
+    {
       "path": "tests/test_evaluator.py",
       "rewritten": true,
       "sha256": "4f568c26b3ae04c360afe0628f2e82023f1abffc7e22549775d04bf32731d915",
@@ -482,7 +610,7 @@
     {
       "path": "tests/test_explore.py",
       "rewritten": false,
-      "sha256": "1fbf0f721bce1d9351ab7ce3b5f0e739598115628eb6ed0fd881210bb5aef9f0",
+      "sha256": "6bc8c1f110d0a72f12b6be8910cca2065af5d775891ce0dd9c472efa65a0d306",
       "source_path": [
         "03_code/tools/handoff/templates/test_explore.py"
       ]
@@ -505,6 +633,14 @@
       ]
     },
     {
+      "path": "tests/test_inference.py",
+      "rewritten": false,
+      "sha256": "1fb2785b13d1642225586eca8299e89eed7b966e3ed51e211992491167f4d20f",
+      "source_path": [
+        "03_code/tools/handoff/templates/test_inference.py"
+      ]
+    },
+    {
       "path": "tests/test_t3_fast.py",
       "rewritten": true,
       "sha256": "d2333a4bb75c847b64da34d08dcd38a3830f20a32570d06f6beae8a16f244609",
@@ -515,5 +651,6 @@
   ],
   "manifest_self_excluded": true,
   "schema": 1,
-  "version": "RX-H1-v1"
+  "source_path_role": "provenance only; paths are not shipped dependencies",
+  "version": "RX-H3b-v1"
 }

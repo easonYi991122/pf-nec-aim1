@@ -1,4 +1,8 @@
-# T-5 审计字段名 / T-5 audit field names
+# 字段可用时点审计任务（T-5）审计字段名 / T-5 audit field names
+
+原名按模式可在[术语表](GLOSSARY.md)检索：`PreopRiskFactor_<code>`、`funddiagnosis_<code>`、`lcos*`、`*_history`、`z_days_since_*`、`*_unknown`、`dxg_fund_*`，另有 `chromsyndspecyn` 与 `extracardspecyn`。具体编码含义须查获授权的数据字典；本页不推测每个代码的临床定义。词表缺项数与当前时点未决列数不是同一审计结论。
+
+以下示例中的名称：被剔除的历史术前风险因素字段标识（`PreopRiskFactor_330`）.
 
 ```text
 PreopRiskFactor_200

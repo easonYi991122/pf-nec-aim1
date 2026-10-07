@@ -1,31 +1,35 @@
-# Aim 2：登记与信号如何衔接
+# 第二研究目标：连续生理信号（Aim 2）：登记与信号如何衔接
 
-版本：NX-H4c-v1；证据侦察日期：2026-10-07。文献侦察已完成，但不是系统综述；本次只整理已有侦察，未联网或重新核验全文。以下仅引侦察中列出的公开论文；“snippet only”表示只见搜索片段、尚未核实，不能作为已确认事实。
+版本：此前代码交接文档修订版本（NX-H4c-v1）；证据侦察日期：2026-10-07。文献侦察已完成，但不是系统综述；本次只整理已有侦察，未联网或重新核验全文。以下仅引侦察中列出的公开论文；“snippet only”表示只见搜索片段、尚未核实，不能作为已确认事实。
 
 ## 当前结论与交付
 
 没有链接键时，只能间接互助：在信号队列内按共同定义重新计算登记评分，作为信号模型的基线或先验；或在信号队列内部，把同一批个体的全分辨率信号模型蒸馏为每日摘要模型。两种做法都不建立跨队列患者对应关系。必须检查变量可用性、日末时点、校准漂移及既往患者重合，不能直接称外部验证。
 
-T-6 现在交付 (a) 变量定义、单位与可见时点对齐表，(b) 全合成评分重算与信号接口原型，(c) 链接治理问题清单。原型必须有仅用胎龄、诊断、手术类型、POD 的 anchor-only 对照，防止把锚点本身的预测能力误称为融合增益。完整合同及零结果验收见 [TEAM_TASKS](TEAM_TASKS.md)；POD、IRB、DUA 等见 [GLOSSARY](GLOSSARY.md)。
+时间记号：术后日数（POD），手术当天从零计。
 
-项目用途分为 U1 动态预警与 U2 寻找治疗改进空间；风险分层只是后者的准备步骤，信号可能补充的准备度／病情信息不等于已识别治疗效应。若动态增益证实很小，B1 优先级上调。当前首阶段为“接口规格与未决表”，见 [SCORER_SCHEMA](SCORER_SCHEMA.md)；本轮未做 Aim 2 建模，下一步仅为合成和治理准备。
+信号接口与链接治理任务（T-6）现在交付 (a) 变量定义、单位与可见时点对齐表，(b) 全合成评分重算与信号接口原型，(c) 链接治理问题清单。原型必须有仅用胎龄、诊断、手术类型与术后日数的锚点对照（anchor-only），防止把锚点本身的预测能力误称为融合增益。完整合同及零结果验收见 [TEAM_TASKS](TEAM_TASKS.md)；POD、伦理审查委员会（IRB）、数据使用协议（DUA）等见 [GLOSSARY](GLOSSARY.md)。
+
+项目用途分为每日动态预警的研究用途（U1）动态预警与寻找治疗改进空间的研究用途（U2）寻找治疗改进空间；风险分层只是后者的准备步骤，信号可能补充的准备度／病情信息不等于已识别治疗效应。若动态增益证实很小，登记与信号衔接的文献侦察工作项（B1）优先级上调。当前首阶段为“接口规格与未决表”，见 [SCORER_SCHEMA](SCORER_SCHEMA.md)；本轮未做 Aim 2 建模，下一步仅为合成和治理准备。
 
 ## 公开证据及适用限制
 
 侦察未找到直接证明“先心病／新生儿重症登记与高频信号在无个体链接时互相增益”的研究。这是有限检索的未发现，不是证明文献不存在。下表的方法对本项目的应用均为推断；不搬用其他人群的性能或匹配率。
 
+题名中的 新生儿重症监护室（NICU）；以下保留原侦察记录的题名，本轮未重新核验全文。
+
 |公开论文|能支持的方向|侦察核实状态与限制|
 |---|---|---|
-|[Kausch 等：Cardiorespiratory signatures of necrotizing enterocolitis: a 4 NICU study](https://profiles.wustl.edu/en/publications/cardiorespiratory-signatures-of-necrotizing-enterocolitis-a-4-nic/)|心肺信号与 NEC 风险有关，值得研究信号侧预测。|同行评审研究的机构摘要已读取；早产儿人群，不能证明先心病人群的无链接融合有效。|
+|[Kausch 等：Cardiorespiratory signatures of necrotizing enterocolitis: a 4 NICU study](https://profiles.wustl.edu/en/publications/cardiorespiratory-signatures-of-necrotizing-enterocolitis-a-4-nic/)|心肺信号与坏死性小肠结肠炎（NEC）风险有关，值得研究信号侧预测。|同行评审研究的机构摘要已读取；早产儿人群，不能证明先心病人群的无链接融合有效。|
 |[DeWitt 等：Splanchnic Near-Infrared Spectroscopy and Necrotizing Enterocolitis After Neonatal Heart Surgery](https://pmc.ncbi.nlm.nih.gov/articles/PMC4368901)|术后内脏氧合可作为探索信号的临床线索。|侦察已读取公开文章；NEC 子样本很小，不能证明增量预测效果或治疗效应。|
 |[Lopez-Paz 等：Unifying distillation and privileged information](https://arxiv.org/abs/1511.03643)|为同一个体的教师／学生信息转移提供方法背景。|会议方法论文；侦察列引，本次未核全文。信号队列内部蒸馏是本项目推断，不能用来跨未链接队列配对。|
 |[Gupta 等：Better Together: Leveraging Unpaired Multimodal Data for Stronger Unimodal Models](https://arxiv.org/abs/2510.08492)|无配对表示学习只是候选方法背景；必须区分锚点信息与额外信息。|预印本，摘要已读取；演示为图文音，未见临床时序验证，不能据此承诺临床收益。|
-|[PC4 / T3 单中心生理信号研究](https://pmc.ncbi.nlm.nih.gov/articles/PMC9207151/)|提示持有双方数据的医院内链接可能有先例。|snippet only；全文抓取失败，链接方法未核实。不能把侦察描述的本地身份链接写成已确认的该文方法，也不能据此估计本项目匹配率。|
+|[儿科心脏重症协作组（PC4） / 外部生理信号平台（T3；全名未核实，与本包历史归因模块不同）的单中心研究](https://pmc.ncbi.nlm.nih.gov/articles/PMC9207151/)|提示持有双方数据的医院内链接可能有先例。|snippet only；全文抓取失败，链接方法未核实。不能把侦察描述的本地身份链接写成已确认的该文方法，也不能据此估计本项目匹配率。|
 |[Vertical Federated Learning: Concepts, Advances and Challenges](https://arxiv.org/pdf/2211.12814)|纵向联邦需要把同一个体的互补字段对齐；不能产生缺失的连接键。|侦察列为预印本综述，本次未核全文；方法背景不构成新生儿 NEC 有效性证据。|
 |[早产儿视网膜病变的多中心联邦研究](https://pmc.ncbi.nlm.nih.gov/articles/PMC9357070)|横向联邦可供已有多站点参与的项目参考。|snippet only；侦察未核实全文和精确指标。研究模态是眼底影像，不能外推为登记与信号链接或 NEC 增益。|
 
 ## 治理边界和可选项
 
-个体级融合须由同时持有双方原件的机构指定 honest broker（独立诚实中介），使用 MRN（病历号）链接，取得 IRB 批准并修订 DUA。团队需要询问谁有两份原件、谁保管对应表和真实日期、如何审计错链／漏链与训练人群重合，以及能释放哪些字段。现有去标识化副本不足以开展源端令牌化；没有机构答复时，交未决清单即可，不推定已授权或已链接。
+个体级融合须由同时持有双方原件的机构指定 honest broker（独立诚实中介），使用病历号（MRN）链接，取得 IRB 批准并修订 DUA。团队需要询问谁有两份原件、谁保管对应表和真实日期、如何审计错链／漏链与训练人群重合，以及能释放哪些字段。现有去标识化副本不足以开展源端令牌化；没有机构答复时，交未决清单即可，不推定已授权或已链接。
 
 统计匹配／合成链接不能用于预测，只能作为部分识别的敏感性界：共享锚点下的条件独立假设不可检验，可能抹掉或制造研究要寻找的 NEC 与信号关联。纵向联邦仍需要连接键；横向联邦只在新合作站点加入时可选。Mac 上全合成伪站点模拟亦可选，仍受卡内预算限制，只检验算法接口。联邦方法不替代时点审计、验证隔离或时变混杂处理。

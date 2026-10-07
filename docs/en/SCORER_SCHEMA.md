@@ -1,6 +1,12 @@
-# T-6: interface specification and open-items table
+# signal-interface and linkage-governance task (T-6): interface specification and open-items table
 
-This is a patient-free synthetic interface proposal, not the complete input list of an existing scorer. Stage one can specify schemas and open items now; complete score recomputation remains BLOCKED until the controller freezes scorer identity, target, field mapping and generation conventions. The table specifies synthetic field names, units and availability times without copying real records, dictionary descriptions or weights.
+The synthetic `spo2_daily_mean` field denotes peripheral oxygen saturation measured by pulse oximetry (SpO2). Its measurement definition, units and quality rules must be fixed with the synthetic-field contract; different oxygen-saturation measurements are not interchangeable by name.
+
+This is a patient-free synthetic interface proposal, not the complete input list of an existing scorer. Stage one can specify schemas and open items now; complete score recomputation remains prerequisite missing (BLOCKED) until we jointly fix scorer identity, target, field mapping and generation conventions. The table specifies synthetic field names, units and availability times without copying real records, dictionary descriptions or weights.
+
+An anchor-only control uses only gestational age, diagnosis, surgery type and postoperative day, subject to the availability gates below.
+
+Time notation: postoperative day (POD), counted from zero on surgery day.
 
 |Field name|Unit / type|As-of time and role|
 |---|---|---|
@@ -20,14 +26,14 @@ This is a patient-free synthetic interface proposal, not the complete input list
 
 Call contract: `score_registry(request) -> {synthetic_subject_key, score_at, scorer_id, scorer_version, target_id, score, valid, missing_inputs}`. Inputs are the metadata and predictors above, without labels. A valid score is a probability in 0–1; missing required fields, invalid units / availability or identity mismatch yields valid=false, score=null and explicit reasons, never a silent zero or anchor-score substitute. Test identical scores for identical aligned inputs, and no changes to past scores from future / late observations.
 
-Target relationship: T-6’s simulated label for the next 30 days is an interface-testing convention, distinct from PI72-CLEAN outcome_3d, Task A y3 and U2’s real yB30. Define a separate synthetic scorer and fit its simulated target. Any later application of an existing scorer retains its original target identity as a baseline / prior input, without relabelling it as a new risk probability. Simulated labels require sufficient generated follow-up; unknown observation is not negative.
+Target relationship: T-6’s simulated label for the next 30 days is an interface-testing convention, distinct from local cleaned-table evaluation contract (PI72-CLEAN) local cleaned-table single-positive-day label (outcome_3d), daily rolling prediction task (Task A) first-outcome label for the next three days (y3) and research use of identifying treatment-improvement space (U2)’s real first in-hospital-outcome label for the next thirty days (yB30). Define a separate synthetic scorer and fit its simulated target. Any later application of an existing scorer retains its original target identity as a baseline / prior input; a new endpoint requires a separately specified and fitted scorer. Simulated labels require sufficient generated follow-up; unknown observation is not negative.
 
-|Controller decision / delivery pending|Work allowed before receipt|
+|Items / materials to agree together|Where to start now|
 |---|---|
 |Scorer identity, target, required_fields and field definitions / units / as-of mappings|Prepare the per-field table; mark unmatched inputs unavailable without claiming recomputation|
 |Stay, event, death / discharge and missingness generation processes plus synthetic seeds|List boundary tests first; never select generating parameters by simulation performance|
-|Missingness rates, arrival delays and sample sizes for 3 complete / missing / delayed scenarios|Specify configuration keys and open items without inventing numbers; retain caps of 4 CPU hours, 0 GPU hours and 0 real-outcome fits|
+|Missingness rates, arrival delays and sample sizes for 3 complete / missing / delayed scenarios|Specify configuration keys and open items without inventing numbers; retain caps of 4 central processing unit (CPU) hours, 0 graphics processing unit (GPU) hours and 0 real-outcome fits|
 |Common rows and training / validation separation for anchor-only, score-alone, signals-alone and signals-plus-score|Design synthetic_subject_key separation tests; anchor-only uses exactly the fields marked above|
-|Data holder, honest broker, IRB / DUA answers and validation-contamination audit|Complete governance questions without contacting institutions or assuming authorized linkage|
+|Data holder, honest broker, institutional review board (IRB) / data use agreement (DUA) answers and validation-contamination audit|Complete governance questions without contacting institutions or assuming authorized linkage|
 
 This page specifies an interface without implementing a scorer. See [TEAM_TASKS](TEAM_TASKS.md) for the task and null deliverables, and [AIM2_LINKAGE_NOTE](AIM2_LINKAGE_NOTE.md) for evidence and method boundaries.

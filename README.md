@@ -1,57 +1,37 @@
-# Project Passion Fruit：NEC 研究代码交接
+# Project Passion Fruit：新生儿心脏手术后的肠道风险研究
 
-English: [README.en.md](README.en.md)。双语约定：`docs/<NAME>.md` 为中文，`docs/en/<NAME>.md` 为对应英文；根目录 README／AGENTS 与 explore/README 的英文版使用 `.en.md`。两种语言承载相同事实和数字，没有优先语言；构建测试检查数字 token 一致。
+[English](README.en.md)
 
-〔事实〕本包包含最终模型代码、冻结规则、合成测试、汇总结果和探索性脚手架。它不含数据、权重或预测。使用者须已经获同一 PC4 数据的 DUA／IRB 授权。这里是回顾性开发集内部评价材料，尚无独立或外部验证。缩写先查 [GLOSSARY](docs/GLOSSARY.md)。
+我们用儿科心脏重症协作组（PC4）的登记数据，研究如何预测新生儿心脏手术后的坏死性小肠结肠炎（NEC）。第一研究目标（Aim 1）包括风险预测与模拟目标试验，后者用于研究治疗改进问题；第二研究目标（Aim 2）将研究连续生理信号，目前尚无这部分数据。本仓库面向一起开展研究的伙伴，提供代码、合成测试和汇总证据。
 
-|合同|最终交接模型|主指标|重复／外层|
-|---|---|---|---|
-|PI72-CLEAN 本地 clean-table 合同|GSAFE-LGB（629 列）；T8-D5SAFE-LGB（604 列）|术后 POD≥0 AUROC|r1–5，每次固定住院外测|
-|Task A formal v2.6 / harness v3|A-D5-LGB（604 列，本轮参照）|总体 AUROC；术后为关键次指标|r0–4，每次 5 折住院 OOF|
+## 目前进展
 
-合同的行、标签和验证方案不同，AUROC 不跨合同比较。PI72-CLEAN 是本地重建，不是论文 0.79 的最终计分设计；该设计尚未核实。A-D5-LGB 不替换历史冠军；Task B 本轮未重训。
+截至 2026-10-07，在同一日级任务和风险集中，加入当日病情提高了区分度，进一步加入累计历史未显示可检测的额外增益；这不自动证明告警检出或临床获益提高。本轮信息阶梯模型与[固定日级树模型参照](docs/TASKS.md)（A-D5-LGB）的区分度点估计接近；未达到预设晋级条件，尚未证明等效。
 
-## 我们停在哪里
+当前评分更能区分哪些住院的风险较高，尚不能可靠跟踪同次住院内病情接近发病的变化。回顾性等容量告警比较较有利，但可实施的训练内定阈值规则未显示明确检出增益；两者需要分开解释。
 
-〔推断〕模型用途尚未定义：谁在何时看到风险、随后改变什么？〔建议〕优先做 A1 用途对应评价、A2 术时评分与日级模型比较、A3 中心留出评价。〔批准的决定〕按 DEC-019 暂停主线结构搜索；以下任一条件可支持重启：可区分的新机制，并冻结指标、预算与停止规则；与 PI 的用途讨论改变主指标；新数据或信息源提供可信证据。新架构名称或新种子本身不够。T-2/T-3 允许按各自冻结卡推进，见 [TEAM_TASKS](docs/TEAM_TASKS.md)。详见 [STATUS_AND_NEXT](docs/STATUS_AND_NEXT.md)。
+这些都是回顾性、内部交叉验证的开发证据，尚无外部验证。结论以仍未解决的 64 列在预测时可用为条件；独立单位是住院而非患者，因为缺少可靠的跨住院患者标识；研究人群是按未来结局筛选的开发队列（formal），不能代表部署人群。
 
-〔建议〕Aim 1b 优先讨论胸骨关闭时机，外周动脉线拔除为条件性备选；待 PI 回答 7 问后才冻结。〔事实〕B1 文献侦察已完成（不是系统综述）：无链接键时只能重算登记评分或在信号队列内部蒸馏，个体级融合需要持有双方数据的机构经授权链接。未做 Aim 2 建模，下一步仅为合成接口规格／原型与治理准备，见 [AIM2_LINKAGE_NOTE](docs/AIM2_LINKAGE_NOTE.md)。B2 阶段混合评价线索保留。
+共同评价附录已安装并冻结，固定时点分层任务不再因附录待审而阻塞；告警档位是预先声明的研究选择，未经首席研究者（PI）认可为临床阈值。用于治疗改进研究准备的术后首日预后分层已在本地运行并复核：相对固定信息加时钟，更丰富输入未显示明确区分度增益；尚未估计治疗效应。短期终点事件较少、估计不可靠。[状态与下一步](docs/STATUS_AND_NEXT.md) 和 [结果及限制](docs/RESULTS.md) 给出完整说明。
 
-〔事实〕请分开读三个集合：**最终模型**见上表；**未达到预设晋级门槛的候选**（T8、T4、M1、Task A 程序）见 [RESULTS](docs/RESULTS.md) 的效应量和区间；**探索性分析与脚手架**（T3、I7、Aim 1b）见 [explore](explore/README.md)。重要性和改动输入后的分数不是治疗效应。
+## 从这里开始
 
-〔事实〕日阳性率必须按合同和阶段解释：Task A 约 0.35%；PI72-CLEAN 外测总体约 1.0%、术后约 1.4–1.5%。PI72-CLEAN（本地 clean-table）的术前全阴性只给出分解恒等式；跨阶段 AUC≈1 是该合同的实测结果，不是标签构成的数学必然，也不归属于论文设计。Task A 的 A-D5-LGB 对应字段约为 0.92，但比较的是全部阳性（含术前阳性）与术前阴性，不能当成纯术后阳性那一格；四格定义见 [EVALUATION](docs/EVALUATION.md)，不得据此跨合同比较性能。来源：`r9/report.md`、`r11/report.md`（内部报告，不随包分发；关键数字见 RESULTS）。
+- 如果你想复现：可以从[我们使用的复现步骤](docs/REPRODUCE.md)开始，先跑合成测试，再在授权环境核对数据与配置。本包可运行三条交接树模型的训练／评价入口及合成接口示例；最新信息阶梯、告警评价和首日分层仅提供汇总，完整复现驱动未随包提供。获授权伙伴可联系仓库维护者（在本仓库开 issue 或直接联系），核对执行配置、版本哈希及运行安排。
+- 如果你想认领工作：欢迎看[任务卡](docs/TEAM_TASKS.md)与[可运行的合成示例](docs/TEAM_USAGE.md)。每张卡说明已有准备、下一步与联系入口和研究边界。
+- 如果你想了解细节：见[任务定义](docs/TASKS.md)、[评价方法](docs/EVALUATION.md)、[结果](docs/RESULTS.md)和[术语表](docs/GLOSSARY.md)；连续信号的准备工作见[数据衔接说明](docs/AIM2_LINKAGE_NOTE.md)。
 
-## 从安装到复现
+仓库维护者维护本包并记录共享评价合同，方便大家比较结果和复核修改。
 
-〔建议〕先按 [ENVIRONMENT](docs/ENVIRONMENT.md) 从空 venv 安装 Mac／Linux 环境，再在仓库根目录执行下列命令；`python` 必须指向该环境。完整 20 张原始表、clean 列序、队列流程与输出树见 [DATA_LAYOUT](docs/DATA_LAYOUT.md)。只写授权私有根目录。
+数据使用协议（DUA）、伦理审查委员会（IRB）的要求及 PI 的数据协议是我们共同的义务。数据与未发表知识产权的共享范围见[排除清单](docs/EXCLUDED.md)；患者级数据、缓存、预测、权重及 PI 未发表代码不得进入 Git；患者级产物只留在获授权的私有环境。
 
-```sh
-export PYTHONPATH=src
-export PYTHONDONTWRITEBYTECODE=1
-export PF_DATA_ROOT=/authorized/pc4
-export PF_CACHE_ROOT=/private/pf-nec-cache
-export PF_RUN_DIR=/private/pf-nec-cache/runs
-python -m pytest -p no:cacheprovider --basetemp="$PF_CACHE_ROOT/test-temp"
-python -m pf_nec.verify
-python -m pf_nec.cli build-data
-for r in 1 2 3 4 5; do
-  python -m pf_nec.cli train --model GSAFE-LGB --repeat "$r"
-  python -m pf_nec.cli train --model T8-D5SAFE-LGB --repeat "$r"
-done
-for r in 0 1 2 3 4; do
-  for f in 0 1 2 3 4; do
-    python -m pf_nec.cli train --model A-D5-LGB --repeat "$r" --fold "$f"
-  done
-done
-python -m pf_nec.cli evaluate --model GSAFE-LGB --repeats 1 2 3 4 5 --descriptive-ci
-python -m pf_nec.cli evaluate --model T8-D5SAFE-LGB --repeats 1 2 3 4 5 --descriptive-ci
-python -m pf_nec.cli evaluate --model A-D5-LGB --repeats 0 1 2 3 4 --descriptive-ci
-```
+## 给人工智能（AI）编码助手 / 机器可读入口
 
-顺序运行，每进程 2 数值线程、RSS≤8 GiB；超限停止，不改配置。缓存只构建一次；续跑须保持输入、版本、绝对路径和成对 CACHE/RUN，不能只移动 RUN。单臂描述性 CI、两个参照的显式 family 配对示例、400 次 harness 与 2000 次分层 bootstrap 的差别、JSON 形状和容差见 [EVALUATION](docs/EVALUATION.md)。
+人工智能（AI）编码助手可从以下材料了解接口和共同约定：
 
-## 核查范围与阅读顺序
+- [AGENTS.md](AGENTS.md)／[英文版](AGENTS.en.md)：协作、数据治理与科研约定；[CLAUDE.md](CLAUDE.md)：指向同一规则的入口。
+- [MANIFEST.json](MANIFEST.json)：文件清单、完整性哈希和来源身份；来源路径仅用于溯源，不是包内运行依赖。
+- [模型规格](src/pf_nec/spec_v1.json)与[探索接口规格](src/explore/team/spec.json)：JavaScript 对象表示法（JSON）格式的固定模型配置与独立探索接口约束。
+- [机器术语表](docs/terminology.json)：中英释义与代码索引。探索规格保留交接时的未放行门值，不能据此判断当前项目进展；是否属于逐运行默认模板未在原实现中明确，详见[接口范围](docs/TEAM_USAGE.md)。研究附录冻结不等于临床认可，真实运行仍须完成约定审查及数据授权。
+- [SCORER_SCHEMA](docs/SCORER_SCHEMA.md)：合成评分接口的字段约定和未决项，尚非可直接运行的完整评分器。
 
-〔事实〕历史 H1 从输入重建的 13 张表一致；A-D5-LGB r0/f0 与 GSAFE-LGB r1 做过真实等价性抽查。A 极小预测差与舍入相容（consistent with rounding）；详见 ENVIRONMENT。这些抽查不代表完整重复、Linux 或 Windows 已重跑，也不构成独立验证。合成测试覆盖三条模型路径、因果时序不变性、评价和卡片接口。
-
-先读 [TASKS](docs/TASKS.md) 和 [RESULTS](docs/RESULTS.md)，再读 STATUS_AND_NEXT；队友开工看 [TEAM_TASKS](docs/TEAM_TASKS.md)。共享排除范围见 [EXCLUDED](docs/EXCLUDED.md)，书目和内部来源解释见 [REFERENCES](docs/REFERENCES.md)。MANIFEST 的 source_path 仅为溯源，不是运行依赖。人员与编码 agent 都遵守 [AGENTS](AGENTS.md)／[AGENTS.en](AGENTS.en.md)；CLAUDE 指向同一规则。
+文档按 `docs/<NAME>.md` 与 `docs/en/<NAME>.md` 成对维护；根目录与探索入口的英文版使用 `.en.md`。两种语言承载相同事实与数字。

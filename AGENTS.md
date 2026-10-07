@@ -1,21 +1,25 @@
-# 人员与编码 agent 的交接规则
+# 人员与人工智能（AI）编码助手的共同约定
 
-English: [AGENTS.en.md](AGENTS.en.md)。先读 README、TASKS 与 STATUS_AND_NEXT；双语目录规则见 README。
+[English](AGENTS.en.md)。可以先读 [README](README.md)、[任务定义](docs/TASKS.md)和[当前状态](docs/STATUS_AND_NEXT.md)。
 
-- 原始数据只读，只用已有 DUA／IRB 授权的数据。患者级表、缓存、模型和预测不得进入 Git；仅写 PF_CACHE_ROOT 或 PF_RUN_DIR。
-- 主控批准研究与真实运行，队友在获授权主机上执行。患者级数据若需在已登记主机以外使用，须先经用户和 PI 按 DUA 确认；不得把任务卡或默认路径当作传输授权。
+仓库维护者维护本包并记录共享评价合同，方便大家比较结果和复核修改。
 
-- 外部路径只通过 `src/pf_nec/config.py` 的环境变量解析。真实运行显式设置 PF_DATA_ROOT；路径默认值不代表授权。
-- 不改冻结 spec、特征规则、种子、风险集或评价器以追求一致或更高指标。新研究另立版本，不复用已使用的锁定集声称独立验证。
-- 先跑合成测试。Task A 每次先合并 5 折 OOF，再对重复等权；PI 同时报总体与术后。不得跨合同比较 AUROC。
-- 每个预测日只用其结束前已知的信息；历史日先门控再生成窗口。G 编码只在对应训练池内交叉拟合。
-- 每进程 2 数值线程、RSS 上限 8 GiB；顺序运行大任务，超限停止并汇报，不静默减少菜单或重复。
-- Mac 先导入 torch，再导入 LightGBM。环境差异如实记录；迁移／续跑约束见 DATA_LAYOUT。
-- `src/pf_nec/` 是最终模型与冻结评价；`src/explore/` 是探索性分析与脚手架。不要把解释工具称为未晋级性能程序。
-- 输出使用〔事实〕／〔推断〕／〔建议〕或 [fact]/[inference]/[suggestion] 区分证据。重要性和改动输入后的分数不是治疗效应；没有完成的独立／外部验证不得声称完成。
-- 新增／修改的文档同时维护中英版及相同数字。MANIFEST 的 source_path 仅为来源身份，不是可打开的包内依赖。
+- 我们都需要遵守数据使用协议（DUA）、伦理审查委员会（IRB）要求及 首席研究者（PI） 的数据协议。原始数据只读；患者级表、缓存、模型权重和预测不得进入 Git，只写授权私有缓存根目录（PF_CACHE_ROOT）或运行目录（PF_RUN_DIR）。未发表知识产权的共享边界见 [EXCLUDED](docs/EXCLUDED.md)。
+- 在已登记主机以外使用患者级数据，仍须按上述协议先取得仓库维护者和 PI 的确认；任务卡和默认路径不构成传输授权。这项义务适用于我们所有人。
+- 外部路径统一通过 `src/pf_nec/config.py` 的环境变量解析。真实运行显式设置授权数据根目录（PF_DATA_ROOT），让输入身份可追溯；默认路径不代表授权。
+- 为保持可比，复现保留固定模型规格、特征规则、种子、风险集和评价器。新想法可以共同讨论并另立版本；既有留出集已用于开发，换种子不能恢复独立验证。
+- 先跑合成测试可尽早发现接口和时序问题。日级任务（Task A）每次先合并 5 折折外预测（OOF），再对重复等权；本地清理表合同（PI72-CLEAN）同时报告总体和术后指标。受试者工作特征曲线下面积（AUROC）只在相同合同、风险集及验证方案内比较。
+- 每个预测日只用其结束前已知的信息，历史日先门控再组窗口；增强编码（G）只在对应训练池内交叉拟合，避免外测信息进入训练。
+- 每进程 2 数值线程、常驻内存（RSS）上限 8 二进制吉字节（GiB），大任务顺序运行。达到上限时保留记录、一起检查原因；静默减少菜单或重复会破坏预定比较。
+- Mac 先导入 torch 再导入轻量梯度提升机（LightGBM），以正确加载数值运行库。环境差异和续跑要求见 [DATA_LAYOUT](docs/DATA_LAYOUT.md)。
+- `src/pf_nec/` 提供最终模型与固定评价，`src/explore/` 提供探索性分析与脚手架。重要性和改动输入后的分数不能证明治疗效应，研究报告清楚区分已测事实、解释和建议。
+- 文档中英文同步、数字一致，缩写先说明原意。文件清单（MANIFEST）的 `source_path` 字段记录原项目的来源位置，不是包内运行路径；修改后一起复核版本、哈希、合成测试与文档。
+
+以下是我们自己检查代码时使用的入口：
+
+以下示例中的名称：解释器模块搜索路径环境变量（`PYTHONPATH`）；禁止生成字节码缓存的解释器环境变量（`PYTHONDONTWRITEBYTECODE`）.
 
 ```sh
-PYTHONPATH=src PYTHONDONTWRITEBYTECODE=1 python -m pytest -p no:cacheprovider --basetemp="$PF_CACHE_ROOT/test-temp"
+PYTHONPATH=src PYTHONDONTWRITEBYTECODE=1 python -m pytest -p no:cacheprovider --basetemp="$PF_RUN_DIR/test-temp"
 PYTHONPATH=src PYTHONDONTWRITEBYTECODE=1 python -m pf_nec.verify
 ```

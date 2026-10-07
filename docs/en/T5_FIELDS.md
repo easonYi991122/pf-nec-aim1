@@ -1,4 +1,8 @@
-# T-5 审计字段名 / T-5 audit field names
+# field-availability audit task (T-5) 审计字段名 / T-5 audit field names
+
+Look up naming patterns in the [glossary](GLOSSARY.md): `PreopRiskFactor_<code>`, `funddiagnosis_<code>`, `lcos*`, `*_history`, `z_days_since_*`, `*_unknown`, `dxg_fund_*`, plus `chromsyndspecyn` and `extracardspecyn`. Specific code meanings require the authorized data dictionary; this page does not infer individual clinical definitions. Missing glossary entries and timing-unresolved columns are different audit counts.
+
+Names used in the example: identifier of the removed historical preoperative-risk-factor field (`PreopRiskFactor_330`).
 
 ```text
 PreopRiskFactor_200

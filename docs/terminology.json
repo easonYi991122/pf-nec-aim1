@@ -1,0 +1,1410 @@
+{
+  "plural_aliases": {
+    "APIs": "API",
+    "AUROCs": "AUROC",
+    "CIs": "CI",
+    "CLIs": "CLI",
+    "CSVs": "CSV",
+    "IDs": "ID",
+    "NaNs": "NaN"
+  },
+  "schema": 1,
+  "terms": {
+    "*_history": {
+      "en": "historical-aggregation suffix; exact windows and availability gates require derivation-code checks, see T5_FIELDS",
+      "zh": "历史聚合派生后缀；具体窗口与可见门须核对派生代码，见 T5_FIELDS"
+    },
+    "*_unknown": {
+      "en": "unknown-code indicator suffix, not a normal value; exact rules in T5_FIELDS and derivation code",
+      "zh": "未知编码标记后缀；不等于正常值，具体规则见 T5_FIELDS 与派生代码"
+    },
+    "A-D5-LGB": {
+      "en": "availability-gated tree reference for the daily task",
+      "zh": "按日可用信息构建的日级任务树模型参照"
+    },
+    "A-T4-GRU": {
+      "en": "historical daily-task gated-recurrent sequence-selection program",
+      "zh": "日级任务的历史门控循环序列选择程序"
+    },
+    "A-T4-TCN": {
+      "en": "historical daily-task temporal-convolution selection program",
+      "zh": "日级任务的历史时间卷积选择程序"
+    },
+    "A-T4-TREE": {
+      "en": "historical daily-task window-tree selection program",
+      "zh": "日级任务的历史窗口树选择程序"
+    },
+    "A-T8-GAIN": {
+      "en": "historical daily-task gain-based feature-selection program",
+      "zh": "日级任务的历史增益选列程序"
+    },
+    "A-formal": {
+      "en": "machine frame identity for the Task A formal development cohort",
+      "zh": "Task A formal 开发队列的机器 frame 身份"
+    },
+    "A1": {
+      "en": "use-specific evaluation work item; also early measurement screening in the causal-draft context",
+      "zh": "用途对应评价的工作项；因果草案语境中也指早期测量筛查"
+    },
+    "A2": {
+      "en": "fixed-versus-daily-information comparison; also later overlap diagnostics in the causal-draft context",
+      "zh": "固定信息与日级信息比较工作项；因果草案语境中也指后续重叠诊断"
+    },
+    "A3": {
+      "en": "leave-centre-out evaluation work item",
+      "zh": "中心留出评价工作项"
+    },
+    "A7": {
+      "en": "planning item pausing main-line architecture search",
+      "zh": "暂停主线结构搜索的规划条目"
+    },
+    "ACTION16": {
+      "en": "fixed action-variable interpretation slice",
+      "zh": "固定行动变量解释切片"
+    },
+    "AGENTS": {
+      "en": "shared-conventions file for people and coding agents",
+      "zh": "人员与编码助手共同约定文件"
+    },
+    "AI": {
+      "en": "artificial intelligence",
+      "zh": "人工智能"
+    },
+    "AIM2_LINKAGE_NOTE": {
+      "en": "signal-to-registry linkage note",
+      "zh": "连续信号与登记数据衔接说明"
+    },
+    "AP": {
+      "en": "average precision",
+      "zh": "平均精确率"
+    },
+    "API": {
+      "en": "application programming interface",
+      "zh": "应用程序编程接口"
+    },
+    "AP_post": {
+      "en": "average precision on sampled retained postoperative rows",
+      "zh": "抽样保留术后行上的平均精确率"
+    },
+    "AP_total": {
+      "en": "average precision on all sampled retained rows",
+      "zh": "抽样保留的总体行上的平均精确率"
+    },
+    "AUC": {
+      "en": "area under the curve; here the receiver operating characteristic curve unless stated otherwise",
+      "zh": "曲线下面积；本包未另说明时指受试者工作特征曲线下面积"
+    },
+    "AUROC": {
+      "en": "area under the receiver operating characteristic curve",
+      "zh": "受试者工作特征曲线下面积"
+    },
+    "AUROC_post": {
+      "en": "postoperative receiver operating characteristic area field",
+      "zh": "术后受试者工作特征曲线下面积字段"
+    },
+    "AUROC_preop_within_phase": {
+      "en": "AUROC within retained preoperative rows; may be undefined for a single class, not replaced with zero",
+      "zh": "保留术前行内部的 AUROC；可能因单类无定义，不填零"
+    },
+    "AUROC_total": {
+      "en": "overall receiver operating characteristic area field",
+      "zh": "总体受试者工作特征曲线下面积字段"
+    },
+    "Aim 1": {
+      "en": "first research aim: registry prediction and target trial emulation",
+      "zh": "第一研究目标：登记数据预测与目标试验模拟"
+    },
+    "Aim 1b": {
+      "en": "target-trial-emulation component of the first research aim",
+      "zh": "第一研究目标中的目标试验模拟部分"
+    },
+    "Aim 2": {
+      "en": "second research aim: continuous physiological signals; data not yet available",
+      "zh": "第二研究目标：连续生理信号；尚无该部分数据"
+    },
+    "AllOperations_procloc_9": {
+      "en": "cardiac operating-room location indicator; not a centre encoding",
+      "zh": "心脏手术室地点指示字段；不是中心编码"
+    },
+    "B": {
+      "en": "feature-slice context: background and clock, not all necessarily preoperative; Task B is a separate landmark prediction task",
+      "zh": "特征切片语境为背景与时钟，并非全部术前已知；Task B 是另一个固定时点预测任务"
+    },
+    "B-only-w1": {
+      "en": "background-and-clock-only single-day model",
+      "zh": "仅背景与时钟的单日模型"
+    },
+    "B1": {
+      "en": "literature-scouting work item for registry and signal linkage",
+      "zh": "登记与信号衔接的文献侦察工作项"
+    },
+    "B2": {
+      "en": "methods work item on mixed perioperative-phase evaluation",
+      "zh": "围术期阶段混合评价的方法学工作项"
+    },
+    "B30": {
+      "en": "alias for the landmark in-hospital-outcome stratification task",
+      "zh": "固定时点后院内结局的风险分层任务别名"
+    },
+    "BLOCKED": {
+      "en": "prerequisite missing; retain the reason and report completed work",
+      "zh": "前置条件未齐，保留原因并报告可完成部分"
+    },
+    "Bd": {
+      "en": "historical daily variant of the landmark task",
+      "zh": "固定时点任务的历史日级变体"
+    },
+    "Bell": {
+      "en": "clinical necrotizing-enterocolitis staging criteria; applicable version needs clinical confirmation",
+      "zh": "临床坏死性小肠结肠炎分级标准；适用版本需临床确认"
+    },
+    "Brier": {
+      "en": "mean squared error of predicted probability against a binary outcome",
+      "zh": "预测概率与二元结局的均方误差"
+    },
+    "Brier_post_sampled": {
+      "en": "Brier probability error on sampled retained postoperative rows",
+      "zh": "抽样保留术后行上的 Brier 概率误差"
+    },
+    "Brier_total_sampled": {
+      "en": "Brier probability error on all sampled retained rows",
+      "zh": "抽样保留总体行上的 Brier 概率误差"
+    },
+    "C": {
+      "en": "feature slice: accumulated history; logistic recipe: C is inverse regularization strength, see TEAM_TASKS",
+      "zh": "特征切片语境为累计历史；logistic 配方中 C 是正则化强度的倒数，见 TEAM_TASKS"
+    },
+    "C2": {
+      "en": "historical field-timing removal-sensitivity screen; not a proven-leakage list",
+      "zh": "历史字段时点删除敏感性筛查；不是已证实泄漏清单"
+    },
+    "CABSI": {
+      "en": "catheter-associated bloodstream-infection table",
+      "zh": "导管相关血流感染表"
+    },
+    "CACHE": {
+      "en": "shorthand for the authorized private cache root",
+      "zh": "授权私有缓存根目录的简写"
+    },
+    "CAUSAL-MS-CNN": {
+      "en": "actual learner configuration key for the CausalMS-CNN mechanism; current cards do not allocate real-data fitting",
+      "zh": "CausalMS-CNN 机制的实际 learner 配置键；当前任务卡未分配真实拟合"
+    },
+    "CCW": {
+      "en": "clone–censor–weight method",
+      "zh": "克隆—删失—加权方法"
+    },
+    "CD3": {
+      "en": "three-calendar-day alert cooldown rule",
+      "zh": "告警间隔三日的日历冷却规则"
+    },
+    "CI": {
+      "en": "confidence interval",
+      "zh": "置信区间"
+    },
+    "CITL": {
+      "en": "calibration-in-the-large, usually represented by a calibration intercept",
+      "zh": "整体校准水平，通常以校准截距表示"
+    },
+    "CLAUDE": {
+      "en": "entry file pointing to shared coding conventions",
+      "zh": "指向共同编码约定的入口文件"
+    },
+    "CLI": {
+      "en": "command-line interface",
+      "zh": "命令行接口"
+    },
+    "CNN": {
+      "en": "convolutional neural network",
+      "zh": "卷积神经网络"
+    },
+    "CORE": {
+      "en": "historical name for local cleaned-table row and sampling interfaces",
+      "zh": "本地清理表行与抽样接口的历史代号"
+    },
+    "CPU": {
+      "en": "central processing unit",
+      "zh": "中央处理器"
+    },
+    "CSV": {
+      "en": "comma-separated values file",
+      "zh": "逗号分隔值文件"
+    },
+    "CUDA": {
+      "en": "NVIDIA's parallel-computing platform",
+      "zh": "英伟达并行计算平台"
+    },
+    "C_h": {
+      "en": "case-stay indicator in the local cleaned-table contract; distinct from the daily label",
+      "zh": "本地清理表的病例住院指示；不同于当天标签"
+    },
+    "CausalMS-CNN": {
+      "en": "causal multiscale convolutional neural network",
+      "zh": "因果多尺度卷积神经网络"
+    },
+    "D1": {
+      "en": "intent to isolate future new data, without carving an independent holdout from used development data",
+      "zh": "未来新增数据隔离意向；不从已用开发数据再切独立留出"
+    },
+    "D3": {
+      "en": "convention retaining a fixed interpretation group without exposing its source learner",
+      "zh": "保留固定解释组而不开放来源学习器的约定"
+    },
+    "D5": {
+      "en": "historical reconstructed feature-bank name; not a window length",
+      "zh": "历史重建特征库名称；不是窗口长度"
+    },
+    "D5-drop65-v1": {
+      "en": "historical removal-sensitivity candidate and frozen-list version; drops the entire timing-uncertain set and listed derived channels, retaining original fold rounds without new tuning or model promotion; see T5_FIELDS",
+      "zh": "历史删除敏感性候选及冻结名单版本；整组删除时点待确认列和列出的派生通道，沿用原折轮数，无新调参，不用于模型晋级；名单见 T5_FIELDS"
+    },
+    "D5-safe": {
+      "en": "registry bank masked by the specified historical-day availability rules; safe does not establish independently verified timing for every source field",
+      "zh": "按历史日执行既定可用时点屏蔽的登记特征库；safe 不表示全部源字段时点均已独立核实"
+    },
+    "D5SAFE": {
+      "en": "configuration key for the daily availability-gated feature bank",
+      "zh": "按日可用时点屏蔽特征库的配置键"
+    },
+    "DAG": {
+      "en": "directed acyclic graph",
+      "zh": "有向无环图"
+    },
+    "DATA_LAYOUT": {
+      "en": "input, cohort and private-output layout guide",
+      "zh": "输入、队列与私有输出布局说明"
+    },
+    "DCA": {
+      "en": "decision curve analysis",
+      "zh": "决策曲线分析"
+    },
+    "DEC": {
+      "en": "historical research-decision record prefix",
+      "zh": "历史研究决定记录编号前缀"
+    },
+    "DEC-007": {
+      "en": "historical evaluation-plan record; centre sensitivity is summarized in the results page",
+      "zh": "历史评价计划记录；中心敏感性结果已摘入结果页"
+    },
+    "DEC-008": {
+      "en": "historical decision defining a bounded search and predeclared combinations",
+      "zh": "历史受限搜索与预先固定组合的决定"
+    },
+    "DEC-009": {
+      "en": "historical decision auditing the enhanced-encoding component",
+      "zh": "历史增强编码组件审计决定"
+    },
+    "DEC-010": {
+      "en": "historical decision closing performance search after that search batch",
+      "zh": "历史搜索批次结束后关闭性能搜索的决定"
+    },
+    "DEC-019": {
+      "en": "historical shared plan to pause main-line architecture search; reasons are in the status page",
+      "zh": "暂停主线结构搜索的历史共同规划；理由见状态页"
+    },
+    "DEC-C2-001": {
+      "en": "historical freeze record for the timing-uncertain field list",
+      "zh": "时点待确认字段清单的历史冻结记录"
+    },
+    "DOA": {
+      "en": "days since admission",
+      "zh": "入院后日数"
+    },
+    "DOI": {
+      "en": "digital object identifier",
+      "zh": "数字对象标识符"
+    },
+    "DSSI": {
+      "en": "deep surgical-site infection table",
+      "zh": "深部手术部位感染表"
+    },
+    "DUA": {
+      "en": "data use agreement",
+      "zh": "数据使用协议"
+    },
+    "D_I_N": {
+      "en": "field in historical action-evidence cards; letter definitions are not explained in this package and must not be inferred",
+      "zh": "历史行动证据卡字段；各字母的定义未随包解释，不能据缩写推断"
+    },
+    "E9-A-D5-site": {
+      "en": "historical centre-held-out sensitivity run of the daily reference",
+      "zh": "日级参照的历史中心留出敏感性运行"
+    },
+    "ECMO": {
+      "en": "extracorporeal membrane oxygenation",
+      "zh": "体外膜肺氧合"
+    },
+    "ENVIRONMENT": {
+      "en": "environment installation and resource guide",
+      "zh": "环境安装与资源指南"
+    },
+    "EOD": {
+      "en": "end of day",
+      "zh": "当日结束"
+    },
+    "ESS": {
+      "en": "effective sample size",
+      "zh": "有效样本量"
+    },
+    "EVALUATION": {
+      "en": "evaluation-contract and examples document",
+      "zh": "评价合同与示例文档"
+    },
+    "EXCLUDED": {
+      "en": "sharing-exclusion and capability-boundary document",
+      "zh": "共享排除与能力边界文档"
+    },
+    "F": {
+      "en": "RESULTS historical landmark ensemble: fixed weighted combination of enhanced tree G, TabPFN and a convolutional network; complete weights and settings not explained in this package; in DATA_LAYOUT rN/fF, F is only a fold-index placeholder",
+      "zh": "RESULTS 历史固定时点组合：增强树 G、TabPFN 与卷积网络的固定加权组合；完整权重及配置未随包解释；DATA_LAYOUT 的 rN/fF 中 F 仅是折号占位"
+    },
+    "FPR": {
+      "en": "false positive rate",
+      "zh": "假阳性率"
+    },
+    "FeatureRows": {
+      "en": "input object with daily-row identities, predictors and availability metadata",
+      "zh": "带日行身份、预测字段及可用性元数据的输入对象"
+    },
+    "FitContext": {
+      "en": "fit-context object binding training-pool identity and seeds",
+      "zh": "绑定训练池身份与种子的拟合上下文对象"
+    },
+    "G": {
+      "en": "encoding context: component adding codes, support states and centre information; RESULTS historical ensemble component G is the complete tree model using these inputs and reconstructed features, not the same object",
+      "zh": "编码语境为代码、支持状态与中心信息增强组件；RESULTS 历史组合的 G 是使用这些输入及重建特征的完整树模型，不能混同"
+    },
+    "G-LGB": {
+      "en": "historical enhanced tree model without the current preoperative masking",
+      "zh": "未重做当前术前屏蔽的历史增强树模型"
+    },
+    "G-safe": {
+      "en": "encoding-enhanced scheme with specified availability masking; safe does not establish independently verified timing for every source field",
+      "zh": "执行既定可用时点屏蔽的编码增强方案；safe 不表示全部源字段时点均已独立核实"
+    },
+    "G-safe-LGB": {
+      "en": "documentation alias for the encoding-enhanced tree reference",
+      "zh": "编码增强树模型参照的文档别名"
+    },
+    "GAIN": {
+      "en": "feature ranking by tree gain within the current training pool",
+      "zh": "在当前训练池内按树模型增益排序选列"
+    },
+    "GAIN50": {
+      "en": "top-fifty feature recipe ranked by gain within the current training pool",
+      "zh": "在当前训练池内按增益取前五十列的特征方案"
+    },
+    "GAIN50-w7": {
+      "en": "training-pool gain-selected configuration with a seven-day calendar window",
+      "zh": "训练池内增益选列加七日日历窗口的配置"
+    },
+    "GB": {
+      "en": "gigabyte in decimal units",
+      "zh": "十进制吉字节"
+    },
+    "GLOSSARY": {
+      "en": "glossary of terms and internal codes",
+      "zh": "术语与内部编号释义表"
+    },
+    "GPU": {
+      "en": "graphics processing unit",
+      "zh": "图形处理器"
+    },
+    "GRU": {
+      "en": "gated recurrent unit",
+      "zh": "门控循环单元"
+    },
+    "GRU-D": {
+      "en": "gated recurrent unit with missingness decay",
+      "zh": "带缺失衰减处理的门控循环单元"
+    },
+    "GRUD-WINDOW": {
+      "en": "configuration key for the missingness-decay window sequence learner",
+      "zh": "带缺失衰减的窗口序列学习器配置键"
+    },
+    "GSAFE": {
+      "en": "availability-gated encoding-enhanced variant; safe does not establish independently verified timing for every source field",
+      "zh": "可用时点屏蔽后的编码增强变体；safe 不表示全部源字段时点均已独立核实"
+    },
+    "GSAFE-LGB": {
+      "en": "encoding-enhanced Light Gradient Boosting Machine reference",
+      "zh": "编码增强的轻量梯度提升树参照"
+    },
+    "GiB": {
+      "en": "gibibyte in binary units",
+      "zh": "二进制吉字节"
+    },
+    "H1": {
+      "en": "first code-handoff and equivalence-check record; summarized in the environment guide",
+      "zh": "首次代码交接与等价性抽查记录；摘要见环境指南"
+    },
+    "I7": {
+      "en": "historical feature-slice, window, sequence and learning-curve diagnostic program",
+      "zh": "历史切片、窗口、序列与学习曲线诊断程序"
+    },
+    "ICU": {
+      "en": "intensive care unit",
+      "zh": "重症监护室"
+    },
+    "ID": {
+      "en": "identifier",
+      "zh": "标识符"
+    },
+    "INNER-THRESH": {
+      "en": "alert rule with thresholds fixed within training and applied unchanged",
+      "zh": "训练内定阈值后原样应用的告警规则"
+    },
+    "IRB": {
+      "en": "institutional review board",
+      "zh": "伦理审查委员会"
+    },
+    "IS": {
+      "en": "inotropic score",
+      "zh": "正性肌力评分"
+    },
+    "IndexSurgHosp": {
+      "en": "index-surgery hospitalization source table; fields and timing require the authorized dictionary",
+      "zh": "索引手术住院主表；字段与可见时点见授权字典"
+    },
+    "IntracardLine": {
+      "en": "intracardiac-line source table; fields and timing require the authorized dictionary",
+      "zh": "心内导管记录表；字段与可见时点见授权字典"
+    },
+    "JSON": {
+      "en": "JavaScript Object Notation",
+      "zh": "JavaScript 对象表示法"
+    },
+    "L2": {
+      "en": "squared-norm regularization",
+      "zh": "平方范数正则化"
+    },
+    "LCOS": {
+      "en": "low cardiac output syndrome",
+      "zh": "低心排血量综合征"
+    },
+    "LF": {
+      "en": "line-feed character",
+      "zh": "换行符"
+    },
+    "LGB": {
+      "en": "Light Gradient Boosting Machine learner code",
+      "zh": "轻量梯度提升机学习器代号"
+    },
+    "LightGBM": {
+      "en": "Light Gradient Boosting Machine",
+      "zh": "轻量梯度提升机"
+    },
+    "M1": {
+      "en": "historical tabular and missingness-aware neural-model selection family",
+      "zh": "历史表格与缺失机制神经模型选择程序组"
+    },
+    "M1-SELECT-CMSCN": {
+      "en": "historical causal-multiscale-convolution model-selection program",
+      "zh": "历史因果多尺度卷积模型选择程序"
+    },
+    "M1-SELECT-GRUD": {
+      "en": "historical missingness-decay recurrent model-selection program",
+      "zh": "历史缺失衰减循环模型选择程序"
+    },
+    "M1-SELECT-TABM": {
+      "en": "historical parameter-sharing tabular model-selection program",
+      "zh": "历史表格共享参数模型选择程序"
+    },
+    "M4": {
+      "en": "Apple chip model in the recorded local environment",
+      "zh": "已有本地运行环境的苹果芯片型号"
+    },
+    "MANIFEST": {
+      "en": "file inventory and integrity-hash record",
+      "zh": "文件清单及完整性哈希记录"
+    },
+    "MAR": {
+      "en": "medication administration record",
+      "zh": "用药执行记录"
+    },
+    "MD": {
+      "en": "Doctor of Medicine degree",
+      "zh": "医学博士学位缩写"
+    },
+    "MDD": {
+      "en": "internally minimum detectable difference; the project's prespecified AUROC promotion margin is 0.01, with complete repeats and simultaneous-interval conditions also required; not by itself a power demonstration",
+      "zh": "内部称最小可检测差；本项目预设 AUROC 晋级差值门为 0.01，另需完整重复及同时区间条件；此处不单独构成统计功效证明"
+    },
+    "MLP": {
+      "en": "multilayer perceptron",
+      "zh": "多层感知机"
+    },
+    "MRN": {
+      "en": "medical record number",
+      "zh": "病历号"
+    },
+    "MechVent": {
+      "en": "mechanical-ventilation source table; fields and timing require the authorized dictionary",
+      "zh": "机械通气记录表；字段与可见时点见授权字典"
+    },
+    "NEC": {
+      "en": "necrotizing enterocolitis",
+      "zh": "坏死性小肠结肠炎"
+    },
+    "NEW": {
+      "en": "suffix in source identifier names; spelling does not establish a new linkage, which requires authorized mapping",
+      "zh": "源标识字段后缀；字样不建立新的连接关系，须核对授权映射"
+    },
+    "NICU": {
+      "en": "neonatal intensive care unit",
+      "zh": "新生儿重症监护室"
+    },
+    "NX-H4-TEAM-v1": {
+      "en": "exploration-interface specification version identity, not this round's research status",
+      "zh": "团队探索接口规格版本身份；不是本轮研究状态"
+    },
+    "NX-H4c-v1": {
+      "en": "previous code-handoff documentation revision",
+      "zh": "此前代码交接文档修订版本"
+    },
+    "NX-H6-v1": {
+      "en": "current collaboration-language, terminology and status revision",
+      "zh": "本次协作措辞、术语和状态修订版本"
+    },
+    "NX-T2-GRUD-GAIN50-v1": {
+      "en": "new bounded missingness-decay modeling program identifier",
+      "zh": "新的受限缺失衰减建模程序标识"
+    },
+    "NX-T2-TABM-GAIN50-v1": {
+      "en": "new bounded tabular modeling program identifier",
+      "zh": "新的受限表格建模程序标识"
+    },
+    "NX-T3-POD02-SEQ-v1": {
+      "en": "early-postoperative ordering-information program; POD02 means the POD0–2 range, see TEAM_TASKS",
+      "zh": "早期术后顺序信息检验程序；POD02 指 POD0–2 范围，见 TEAM_TASKS"
+    },
+    "NX-T4-POD1-yB30-v1": {
+      "en": "new postoperative-first-day landmark-stratification program identifier",
+      "zh": "新的术后首日固定时点分层程序标识"
+    },
+    "NaN": {
+      "en": "Not a Number, used as a numerical missing-value marker, not zero",
+      "zh": "数值缺失标记；不是零"
+    },
+    "O/E": {
+      "en": "observed-to-expected event ratio",
+      "zh": "观测事件数与期望事件数之比"
+    },
+    "OLS": {
+      "en": "ordinary least squares",
+      "zh": "普通最小二乘"
+    },
+    "OOF": {
+      "en": "out-of-fold predictions",
+      "zh": "折外预测"
+    },
+    "OR": {
+      "en": "operating room",
+      "zh": "手术室"
+    },
+    "ORDERLESS_MLP": {
+      "en": "orderless multilayer-perceptron control",
+      "zh": "忽略顺序的多层感知机对照"
+    },
+    "OpenMP": {
+      "en": "shared-memory parallel programming interface; here its numerical runtime",
+      "zh": "共享内存并行编程接口；此处指其数值运行库"
+    },
+    "PACU": {
+      "en": "post-anesthesia care unit",
+      "zh": "麻醉恢复室"
+    },
+    "PC4": {
+      "en": "Pediatric Cardiac Critical Care Consortium",
+      "zh": "儿科心脏重症协作组"
+    },
+    "PF_CACHE_ROOT": {
+      "en": "environment variable for the authorized private cache root",
+      "zh": "授权私有缓存根目录环境变量"
+    },
+    "PF_DATA_ROOT": {
+      "en": "environment variable for the authorized read-only data root",
+      "zh": "授权只读数据根目录环境变量"
+    },
+    "PF_ENV": {
+      "en": "private environment-directory variable in installation examples",
+      "zh": "安装示例中的私有环境目录变量"
+    },
+    "PF_RUN_DIR": {
+      "en": "environment variable for the authorized private run-output directory",
+      "zh": "授权私有运行输出目录环境变量"
+    },
+    "PI": {
+      "en": "principal investigator",
+      "zh": "首席研究者"
+    },
+    "PI-29": {
+      "en": "source-model feature family excluded from the package",
+      "zh": "未随包提供的来源模型特征家族"
+    },
+    "PI10": {
+      "en": "fixed ten-variable interpretation group; its source learner is not exposed",
+      "zh": "固定的十变量解释分组；不开放相应来源学习器"
+    },
+    "PI29": {
+      "en": "alias of the excluded source-model feature family",
+      "zh": "未随包提供的来源模型特征家族的别名"
+    },
+    "PI72": {
+      "en": "historical shorthand for the local cleaned-table contract; does not certify the manuscript design",
+      "zh": "本地清理表合同的历史简称；不认证原论文设计"
+    },
+    "PI72-CLEAN": {
+      "en": "local cleaned-table row, label and evaluation contract; the manuscript's final scoring design remains unresolved",
+      "zh": "本地清理表选行、标签及评价合同；原论文最终评分设计仍未解决"
+    },
+    "POD": {
+      "en": "postoperative day",
+      "zh": "术后日数"
+    },
+    "POD0": {
+      "en": "surgery day; completed-surgery information still requires recording and availability gates, not merely a nonnegative day",
+      "zh": "手术当天；术毕信息仍须通过记录和可见门，不能只凭非负术后日数解封"
+    },
+    "POD02": {
+      "en": "program-identifier range POD0–2, inclusive of surgery day through postoperative day 2; not a single day",
+      "zh": "程序标识中的术后日范围 POD0–2，包含手术当天至术后第 2 天；不是单独一天"
+    },
+    "POD1": {
+      "en": "postoperative day 1, with surgery day counted from zero",
+      "zh": "术后第 1 天，手术当天从零计"
+    },
+    "POD2": {
+      "en": "postoperative day 2, with surgery day counted from zero",
+      "zh": "术后第 2 天，手术当天从零计"
+    },
+    "POD3": {
+      "en": "postoperative day 3, with surgery day counted from zero",
+      "zh": "术后第 3 天，手术当天从零计"
+    },
+    "POD31": {
+      "en": "postoperative day 31, with surgery day counted from zero",
+      "zh": "术后第 31 天，手术当天从零计"
+    },
+    "POD8": {
+      "en": "postoperative day 8, with surgery day counted from zero",
+      "zh": "术后第 8 天，手术当天从零计"
+    },
+    "POD_lead_profile": {
+      "en": "attribution field stratified by postoperative day and event lead time",
+      "zh": "按术后日数及事件提前量分层的归因字段"
+    },
+    "PPRL": {
+      "en": "privacy-preserving record linkage",
+      "zh": "隐私保护记录链接"
+    },
+    "PPV": {
+      "en": "positive predictive value",
+      "zh": "阳性预测值"
+    },
+    "PYTHONDONTWRITEBYTECODE": {
+      "en": "interpreter environment variable disabling bytecode caches",
+      "zh": "禁止生成字节码缓存的解释器环境变量"
+    },
+    "PYTHONPATH": {
+      "en": "interpreter module-search-path environment variable",
+      "zh": "解释器模块搜索路径环境变量"
+    },
+    "PhDc": {
+      "en": "Doctor of Philosophy candidate designation",
+      "zh": "哲学博士候选人称谓"
+    },
+    "PreopRiskFactor": {
+      "en": "preoperative-risk-factor source table; code meanings require the authorized dictionary",
+      "zh": "术前风险因素记录表；编码含义见授权字典"
+    },
+    "PreopRiskFactor_330": {
+      "en": "identifier of the removed historical preoperative-risk-factor field",
+      "zh": "被剔除的历史术前风险因素字段标识"
+    },
+    "PreopRiskFactor_<code>": {
+      "en": "derived preoperative-risk-factor code pattern; exact codes in T5_FIELDS and the authorized dictionary, not inferred individually",
+      "zh": "术前风险因素代码派生列模式；具体代码见 T5_FIELDS 与授权字典，不逐码猜测"
+    },
+    "ProcLoc": {
+      "en": "operating-location field; distinct from centre encoding",
+      "zh": "手术地点字段；与中心编码不同"
+    },
+    "R1": {
+      "en": "lag-flattened window representation; not a repeat identifier",
+      "zh": "将窗口内滞后值展开的表示配方；不是重复编号"
+    },
+    "R1-LGB": {
+      "en": "lag-flattened-window tree model",
+      "zh": "使用滞后展开窗口的树模型"
+    },
+    "R10": {
+      "en": "historical local cleaned-table attribution report",
+      "zh": "本地清理表历史归因报告"
+    },
+    "R11": {
+      "en": "historical daily-task confirmation, attribution and closeout report",
+      "zh": "日级任务历史确认、归因与收尾报告"
+    },
+    "R3": {
+      "en": "window representation of per-variable summaries and structural counts",
+      "zh": "每变量统计摘要与结构计数的窗口表示"
+    },
+    "R4": {
+      "en": "sequence representation with values, missingness bits and row-availability bits",
+      "zh": "含序列值、缺失位和行可用位的表示"
+    },
+    "R8": {
+      "en": "historical candidate-program screening report for the local cleaned-table contract",
+      "zh": "本地清理表候选程序的历史初筛报告"
+    },
+    "R9": {
+      "en": "RESULTS historical cleaned-table confirmation report; feature-encoding context: nine raw-code inputs, see TASKS; distinct from lowercase repeat index r",
+      "zh": "RESULTS 的历史本地清理表确认报告；特征编码语境为九个原始代码输入，见 TASKS；不与小写重复编号 r 混同"
+    },
+    "RANK_ORDER": {
+      "en": "fixed ordering key for causal-discussion cards",
+      "zh": "因果讨论卡的固定排序键"
+    },
+    "RANK_REASONS": {
+      "en": "field recording reasons for causal-discussion ordering",
+      "zh": "因果讨论排序的理由字段"
+    },
+    "README": {
+      "en": "human-facing repository introduction",
+      "zh": "面向读者的仓库入口"
+    },
+    "REPRODUCE": {
+      "en": "reproduction guide",
+      "zh": "复现步骤指南"
+    },
+    "RESULTS": {
+      "en": "aggregate-results and evidence-boundary document",
+      "zh": "汇总结果及证据边界文档"
+    },
+    "RETRO-CAP": {
+      "en": "retrospective equal-capacity alert allocation using future days' scores",
+      "zh": "使用未来日评分的回顾性等容量告警分配"
+    },
+    "RNG": {
+      "en": "random number generator",
+      "zh": "随机数生成器"
+    },
+    "RSS": {
+      "en": "resident set size",
+      "zh": "常驻内存"
+    },
+    "RUN": {
+      "en": "shorthand for the private run-output directory",
+      "zh": "私有运行输出目录的简写"
+    },
+    "RUN_ROOT": {
+      "en": "resolved private run-output root",
+      "zh": "配置解析后的私有运行输出根"
+    },
+    "RX-D1": {
+      "en": "historical evaluation-contract freeze work item",
+      "zh": "历史评价合同冻结工作项"
+    },
+    "RX-D1-v1": {
+      "en": "frozen computation and seed-naming version, see RX-D1; not the current documentation version",
+      "zh": "冻结计算及种子命名版本，见 RX-D1；不是文档当前版本"
+    },
+    "RX-H1": {
+      "en": "first handoff-export work item",
+      "zh": "首次交接导出工作项"
+    },
+    "RX-H1-v1": {
+      "en": "version identity of initial-handoff provenance, see RX-H1; not the current documentation version",
+      "zh": "首次交接来源的版本身份，见 RX-H1；不是文档当前版本"
+    },
+    "RX-H2": {
+      "en": "historical blind-reading and semantic-review work item",
+      "zh": "历史盲读与语义审查工作项"
+    },
+    "RX-H3": {
+      "en": "historical handoff-document revision work item",
+      "zh": "历史交接文档修订工作项"
+    },
+    "RX-I1": {
+      "en": "historical implementation-interface work item",
+      "zh": "历史实现接口工作项"
+    },
+    "RX-I11": {
+      "en": "historical fast-attribution aggregation-refactoring work item",
+      "zh": "历史快速归因聚合重构工作项"
+    },
+    "RX-I2b": {
+      "en": "historical enhanced-encoding interface work item",
+      "zh": "历史编码增强接口工作项"
+    },
+    "RiskSurgVIS": {
+      "en": "vasoactive-inotropic-score source table; snapshot anchors and availability require the authorized field contract",
+      "zh": "血管活性—正性肌力评分记录表；快照锚点及可见门见授权字段合同"
+    },
+    "S": {
+      "en": "I7: current-day state slice; S.parquet: support-state cache, see DATA_LAYOUT; the severity-proxy field is not this slice",
+      "zh": "I7 语境为当日状态切片；S.parquet 为支持状态缓存，见 DATA_LAYOUT；严重度代理字段不是该切片"
+    },
+    "S.parquet": {
+      "en": "support-state cache built by data.py through line_S, not the I7 current-day slice",
+      "zh": "data.py 经 line_S 构建的支持状态缓存，不是 I7 当日状态切片"
+    },
+    "S15": {
+      "en": "block of fifteen derived support-state features",
+      "zh": "十五个支持状态派生特征块"
+    },
+    "SCORER_SCHEMA": {
+      "en": "synthetic scoring-interface schema and open-items table",
+      "zh": "合成评分接口规格与未决表"
+    },
+    "SHA-256": {
+      "en": "Secure Hash Algorithm file-integrity digest",
+      "zh": "安全散列算法的文件完整性摘要"
+    },
+    "SHADOW": {
+      "en": "historical shadow-variable ranking method",
+      "zh": "历史影子变量排序方法"
+    },
+    "SHAP": {
+      "en": "SHapley Additive exPlanations; model dependence rather than treatment effect",
+      "zh": "Shapley 加性解释；衡量模型依赖而非治疗效应"
+    },
+    "SHIFT": {
+      "en": "date suffix in source names; spelling alone does not establish shifting rules, which require authorized mapping",
+      "zh": "源字段名称中的日期后缀；字样本身不证明移位规则，须核对授权映射"
+    },
+    "SMD": {
+      "en": "standardized mean difference",
+      "zh": "标准化均数差"
+    },
+    "STAGE4_IDS": {
+      "en": "fixed set of question identifiers supported by causal drafts",
+      "zh": "支持因果草案的固定问题标识集合"
+    },
+    "STAT": {
+      "en": "Society of Thoracic Surgeons–European Association for Cardio-Thoracic Surgery congenital heart surgery risk score",
+      "zh": "胸外科医师协会与欧洲心胸外科协会先心病手术风险评分"
+    },
+    "STATE": {
+      "en": "internal historical state record; relevant conclusions are summarized here",
+      "zh": "内部历史状态记录；相关结论已摘入本包"
+    },
+    "STATUS_AND_NEXT": {
+      "en": "current-status and next-step discussion document",
+      "zh": "当前状态与下一步讨论文档"
+    },
+    "STOP": {
+      "en": "historical status stopped at its screening gate; neither automatic extension nor reversal of results",
+      "zh": "停在原筛查门的历史状态；不自动延伸或推翻结果"
+    },
+    "S_RISK": {
+      "en": "severity-proxy-risk discussion field",
+      "zh": "严重度代理风险的讨论字段"
+    },
+    "SpO2": {
+      "en": "peripheral oxygen saturation measured by pulse oximetry; measurement and quality rules await the synthetic-field contract, see SCORER_SCHEMA",
+      "zh": "脉搏血氧饱和度；测量定义与质量规则待合成字段合同固定，见 SCORER_SCHEMA"
+    },
+    "Surgdiag": {
+      "en": "surgical-diagnosis source table; codes and timing require the authorized dictionary",
+      "zh": "手术诊断记录表；代码及可见时点见授权字典"
+    },
+    "T-2": {
+      "en": "open task: bounded tabular and missingness-aware modeling",
+      "zh": "开放任务：受限表格与缺失机制建模"
+    },
+    "T-3": {
+      "en": "open task: early-postoperative ordering-information test",
+      "zh": "开放任务：早期术后顺序信息检验"
+    },
+    "T-4": {
+      "en": "open task: postoperative-first-day landmark stratification",
+      "zh": "开放任务：术后首日固定时点分层"
+    },
+    "T-5": {
+      "en": "open task: field-availability timing audit",
+      "zh": "开放任务：字段可用时点审计"
+    },
+    "T-6": {
+      "en": "open task: signal interfaces and linkage governance",
+      "zh": "开放任务：信号接口与链接治理"
+    },
+    "T007": {
+      "en": "internal manuscript-table organization record; not a shipped dependency",
+      "zh": "内部论文表格整理记录；不是随包依赖"
+    },
+    "T2": {
+      "en": "historical fixed-prediction rescoring work item",
+      "zh": "历史固定预测重评分工作项"
+    },
+    "T3": {
+      "en": "context-dependent: explore.t3 is the historical attribution module; AIM2_LINKAGE_NOTE cites an external physiological-signal platform whose full name and linkage method remain unverified, with search snippets only",
+      "zh": "多义：explore.t3 为历史模型归因模块；AIM2_LINKAGE_NOTE 中为外部生理信号平台，全名及链接方法未核实，仅有检索片段"
+    },
+    "T3a": {
+      "en": "historical overall-importance analysis",
+      "zh": "历史总体重要性分析"
+    },
+    "T3b": {
+      "en": "historical case-and-control trajectory analysis",
+      "zh": "历史病例与对照轨迹分析"
+    },
+    "T3c": {
+      "en": "historical postoperative-day and event-lead attribution",
+      "zh": "历史术后日数与事件提前量归因"
+    },
+    "T4": {
+      "en": "historical window and sequence selection program",
+      "zh": "历史窗口与序列选择程序"
+    },
+    "T4-MATCHED-W1": {
+      "en": "historical feature-matched single-day tree reference",
+      "zh": "历史匹配特征的单日树参照"
+    },
+    "T4-SELECT-GRU": {
+      "en": "historical gated-recurrent sequence-selection program",
+      "zh": "历史门控循环序列选择程序"
+    },
+    "T4-SELECT-TCN": {
+      "en": "historical temporal-convolution sequence-selection program",
+      "zh": "历史时间卷积序列选择程序"
+    },
+    "T4-SELECT-TREE": {
+      "en": "historical window-tree selection program",
+      "zh": "历史窗口树选择程序"
+    },
+    "T5": {
+      "en": "historical prediction-task closeout code; distinct from the hyphenated timing-audit card",
+      "zh": "历史预测任务收尾编号；不同于带连字符的时点审计卡"
+    },
+    "T5_FIELDS": {
+      "en": "historical audit field-name list document",
+      "zh": "历史审计字段名清单文档"
+    },
+    "T6": {
+      "en": "historical action-candidate card code; distinct from the hyphenated signal-interface card",
+      "zh": "历史行动候选线索卡编号；不同于带连字符的信号接口卡"
+    },
+    "T6_candidates": {
+      "en": "aggregate-evidence field for historical action candidates",
+      "zh": "历史行动候选的汇总证据字段"
+    },
+    "T8": {
+      "en": "historical feature-count selection program",
+      "zh": "历史特征数量选择程序"
+    },
+    "T8-D5SAFE-LGB": {
+      "en": "full availability-gated tree reference for the local cleaned-table contract",
+      "zh": "本地清理表的全列可用时点屏蔽树模型参照"
+    },
+    "T8-D5SAFE-XGB": {
+      "en": "historical extreme-gradient-boosted tree reference for the local cleaned-table contract",
+      "zh": "本地清理表的历史极端梯度提升树参照"
+    },
+    "T8-SELECT-LGB": {
+      "en": "historical Light Gradient Boosting feature-count selection program",
+      "zh": "历史轻量梯度提升特征数量选择程序"
+    },
+    "T8-SELECT-XGB": {
+      "en": "historical extreme-gradient-boosting feature-count selection program",
+      "zh": "历史极端梯度提升特征数量选择程序"
+    },
+    "TABM-R1": {
+      "en": "lag-flattened configuration key for the parameter-sharing tabular model",
+      "zh": "表格共享参数模型的滞后展开配置键"
+    },
+    "TASKS": {
+      "en": "task-contract definitions document",
+      "zh": "任务合同定义文档"
+    },
+    "TCN": {
+      "en": "temporal convolutional network",
+      "zh": "时间卷积网络"
+    },
+    "TEAM_TASKS": {
+      "en": "open task-card document",
+      "zh": "开放任务卡文档"
+    },
+    "TEAM_USAGE": {
+      "en": "synthetic guide to single-fit and label-free application",
+      "zh": "单次拟合与无标签应用的合成使用指南"
+    },
+    "TREE": {
+      "en": "tree-model program label",
+      "zh": "树模型程序代称"
+    },
+    "TTE": {
+      "en": "target trial emulation",
+      "zh": "目标试验模拟"
+    },
+    "TabM": {
+      "en": "parameter-sharing ensemble of small tabular models",
+      "zh": "共享参数的小型表格模型集成"
+    },
+    "TabPFN": {
+      "en": "Tabular Prior-data Fitted Network; here identifying a historical ensemble component only",
+      "zh": "表格先验拟合网络；此处仅说明历史组合身份"
+    },
+    "Task A": {
+      "en": "daily rolling prediction task",
+      "zh": "逐日滚动预测任务"
+    },
+    "Task B": {
+      "en": "landmark risk-stratification task",
+      "zh": "固定时点风险分层任务"
+    },
+    "U1": {
+      "en": "research use of daily dynamic warning",
+      "zh": "每日动态预警的研究用途"
+    },
+    "U2": {
+      "en": "research use of identifying treatment-improvement space; the current step is prognostic stratification",
+      "zh": "寻找治疗改进空间的研究用途；当前步骤是预后分层"
+    },
+    "U2_CONTRACT_SUMMARY": {
+      "en": "shared evaluation-contract summary for landmark stratification",
+      "zh": "固定时点分层共同评价合同摘要"
+    },
+    "UTF-8": {
+      "en": "variable-length Unicode text encoding",
+      "zh": "Unicode 文本的可变长度编码"
+    },
+    "UTI": {
+      "en": "urinary-tract infection table",
+      "zh": "尿路感染表"
+    },
+    "VIS": {
+      "en": "vasoactive-inotropic score",
+      "zh": "血管活性—正性肌力评分"
+    },
+    "WP0": {
+      "en": "historical local cleaned-table row and sampling reconciliation work item",
+      "zh": "本地清理表行与抽样核对的历史工作项"
+    },
+    "Windows-1252": {
+      "en": "Windows text-encoding name; see cp1252",
+      "zh": "Windows 文本编码名称；见 cp1252"
+    },
+    "XGB": {
+      "en": "extreme gradient boosting learner code",
+      "zh": "极端梯度提升学习器代号"
+    },
+    "XGB-A-D5-phase_split": {
+      "en": "historical daily-task extreme-gradient-boosting configuration split by preoperative and postoperative phase",
+      "zh": "日级任务按术前术后分开的历史极端梯度提升配置"
+    },
+    "a": {
+      "en": "first-event group at POD4–31; included when cleaned-table-linked and still at risk",
+      "zh": "首次术后较晚窗口事件组，POD4–31；关联清理表且仍在险时纳入"
+    },
+    "abc": {
+      "en": "historical target combining onset groups a/b/c; current formal uses a/b/none, see TASKS",
+      "zh": "历史 a/b/c 首发时点组的目标合称，当前 formal 使用 a/b/none；见 TASKS"
+    },
+    "anchor-only": {
+      "en": "anchor control using only gestational age, diagnosis, surgery type and postoperative day",
+      "zh": "仅胎龄、诊断、手术类型与术后日数的锚点对照"
+    },
+    "as-of": {
+      "en": "actually available by prediction time",
+      "zh": "截至预测时点实际可见"
+    },
+    "b": {
+      "en": "early postoperative event group at POD0–3; may have positive preoperative rolling labels",
+      "zh": "早期术后事件组，POD0–3；可有术前滚动标签阳性"
+    },
+    "birthwt": {
+      "en": "birth weight; units require the authorized dictionary, see RESULTS",
+      "zh": "出生体重；单位以授权字典为准，见 RESULTS"
+    },
+    "c": {
+      "en": "first event after admission but before surgery; excluded from formal",
+      "zh": "入院后手术前首发事件组；排除于 formal"
+    },
+    "c_aux": {
+      "en": "auxiliary rows for the preoperative-first-event group",
+      "zh": "术前首发事件组的辅助行"
+    },
+    "cardsurgdtSHIFT": {
+      "en": "source surgery-date field; date parsing and index-surgery matching in DATA_LAYOUT",
+      "zh": "源手术日期字段；日期解析和索引手术匹配见 DATA_LAYOUT"
+    },
+    "cardsurgdtshift_index": {
+      "en": "clean index-surgery date serial; mapping and source-date checks in DATA_LAYOUT",
+      "zh": "clean 索引手术日期序数；映射与原始日期核对见 DATA_LAYOUT"
+    },
+    "chromsyndspecyn": {
+      "en": "whether a chromosomal abnormality or syndrome is present; definition from authorized dictionary, codes and timing still require checks, see T5_FIELDS",
+      "zh": "是否有染色体异常或综合征；定义来自授权字典，具体编码与时点仍须核对，见 T5_FIELDS"
+    },
+    "ci95": {
+      "en": "95% confidence-interval output field, see explore/README",
+      "zh": "95% 置信区间输出字段，见 explore/README"
+    },
+    "cp1252": {
+      "en": "Windows-1252 text-encoding fallback, not a cohort version",
+      "zh": "Windows-1252 文本编码回退；不是队列版本"
+    },
+    "cross_stage_AUC": {
+      "en": "in the EVALUATION formula, AUROC ranking postoperative positives against preoperative negatives",
+      "zh": "EVALUATION 公式中术后阳性对术前阴性的排序 AUROC"
+    },
+    "cross_stage_positive_vs_preop_negative_auc": {
+      "en": "general phase-diagnostic field: positive-day versus preoperative-negative ranking; see EVALUATION for the positive-phase convention",
+      "zh": "通用阶段诊断字段：阳性日对术前阴性日的排序；目标阳性阶段口径见 EVALUATION"
+    },
+    "cu128": {
+      "en": "CUDA build tag of the frozen torch package; preserve the ENVIRONMENT version string",
+      "zh": "冻结 torch 安装包的 CUDA 构建标记；保留 ENVIRONMENT 中版本字符串"
+    },
+    "d": {
+      "en": "first event after POD31; excluded from formal",
+      "zh": "POD31 后首发事件组；排除于 formal"
+    },
+    "d_window": {
+      "en": "within-window auxiliary rows for the late-first-event group",
+      "zh": "晚期首发事件组的窗口内辅助行"
+    },
+    "draft_dag": {
+      "en": "causal-graph draft interface, see explore/README",
+      "zh": "因果图草案接口，见 explore/README"
+    },
+    "dxg_fund_*": {
+      "en": "derived fundamental-diagnosis group pattern; mappings require derivation code and authorized dictionary, exact names in T5_FIELDS",
+      "zh": "基础诊断分组派生字段模式；组别映射见派生代码及授权字典，原名见 T5_FIELDS"
+    },
+    "err": {
+      "en": "erroneous-date group with event before admission; excluded",
+      "zh": "事件日期早于入院的错误日期组；排除"
+    },
+    "extracardspecyn": {
+      "en": "whether a congenital extracardiac anomaly is present; definition from authorized dictionary, codes and timing still require checks, see T5_FIELDS",
+      "zh": "是否有先天性心外畸形；定义来自授权字典，具体编码与时点仍须核对，见 T5_FIELDS"
+    },
+    "f_pre": {
+      "en": "fraction of all negative days that are preoperative, see EVALUATION formula",
+      "zh": "术前阴性日占全部阴性日的比例，见 EVALUATION 公式"
+    },
+    "fit_pool_sha256": {
+      "en": "SHA-256 digest of fitting-pool identity",
+      "zh": "拟合训练池身份的 SHA-256 摘要"
+    },
+    "fold_r*": {
+      "en": "naming pattern for repeat-specific fold fields, see fold_rN",
+      "zh": "重复折号字段的名称模式，见 fold_rN"
+    },
+    "fold_rN": {
+      "en": "stay-grouped fold for repeat N; fold_r* is the corresponding naming pattern",
+      "zh": "第 N 次按住院划分的折号；fold_r* 是对应名称模式"
+    },
+    "fold_site": {
+      "en": "fixed centre group, see STATUS_AND_NEXT",
+      "zh": "固定中心分组，见 STATUS_AND_NEXT"
+    },
+    "formal": {
+      "en": "as a cohort code: outcome-conditioned, cleaned-table-linked development cohort; the ordinary English adjective formal does not name that cohort",
+      "zh": "作为队列代码：按未来结局筛选且关联清理表的开发队列；英文普通形容词 formal 不指该队列"
+    },
+    "funddiagnosis_<code>": {
+      "en": "derived fundamental-cardiac-diagnosis code pattern; exact codes in T5_FIELDS and the authorized dictionary",
+      "zh": "基础心脏诊断代码派生列模式；具体代码见 T5_FIELDS 与授权字典"
+    },
+    "gestagewks": {
+      "en": "gestational age in weeks; background-field description in RESULTS",
+      "zh": "孕周；背景字段说明见 RESULTS"
+    },
+    "harness_v2": {
+      "en": "historical evaluation implementation; alert conventions in STATUS_AND_NEXT",
+      "zh": "历史评价实现版本；告警口径见 STATUS_AND_NEXT"
+    },
+    "harness_v3": {
+      "en": "frozen stay-splitting and evaluation implementation version, see STATUS_AND_NEXT",
+      "zh": "冻结住院划分与评价的实现版本，见 STATUS_AND_NEXT"
+    },
+    "hospitalizationidNEW": {
+      "en": "raw stay identifier, not a cross-stay patient identifier; see DATA_LAYOUT",
+      "zh": "raw 住院标识；不是跨住院患者标识，见 DATA_LAYOUT"
+    },
+    "hospitalizationidnew": {
+      "en": "clean stay identifier; checked against raw keys through builder mapping, see DATA_LAYOUT",
+      "zh": "clean 住院标识；与 raw 键按构建映射核对，见 DATA_LAYOUT"
+    },
+    "late_aux": {
+      "en": "late-event auxiliary day set",
+      "zh": "晚期事件辅助日集合"
+    },
+    "late_era": {
+      "en": "later-data-era flag with possible follow-up truncation",
+      "zh": "较晚且可能随访截尾的数据时期标记"
+    },
+    "lcos*": {
+      "en": "postoperative low-cardiac-output-related field pattern; measurement conditions require the authorized dictionary, exact names in T5_FIELDS",
+      "zh": "术后低心排出量相关字段模式；各测量条件见授权字典，原名见 T5_FIELDS"
+    },
+    "libomp": {
+      "en": "OpenMP numerical runtime",
+      "zh": "OpenMP 数值运行库"
+    },
+    "locked": {
+      "en": "previously evaluated temporal holdout; no longer untouched",
+      "zh": "已经用于历史评价的时间留出；当前并非未触碰留出"
+    },
+    "logistic.C": {
+      "en": "inverse regularization strength in the logistic recipe, not accumulated-history slice C",
+      "zh": "logistic 配方的正则化强度倒数，不是累计历史切片 C"
+    },
+    "max_iter": {
+      "en": "optimizer iteration cap, see TEAM_TASKS",
+      "zh": "优化器的迭代上限，见 TEAM_TASKS"
+    },
+    "mean_auc_loss": {
+      "en": "mean AUROC loss after permutation, describing model reliance rather than effect, see explore/README",
+      "zh": "置换后平均 AUROC 损失，衡量模型依赖而非效应，见 explore/README"
+    },
+    "nan_rows": {
+      "en": "number of numerical-missing rows, see explore/README",
+      "zh": "数值缺失行数，见 explore/README"
+    },
+    "necbelldtshift": {
+      "en": "clean first necrotizing-enterocolitis event date serial; see DATA_LAYOUT",
+      "zh": "clean 首次坏死性小肠结肠炎事件日期序数；见 DATA_LAYOUT"
+    },
+    "none": {
+      "en": "group without a known first-event date; not confirmed absence of disease",
+      "zh": "没有已知首发日期的组；不等于证实未发病"
+    },
+    "outcome_3d": {
+      "en": "local cleaned-table single-positive-day label; not an alias for the rolling daily label",
+      "zh": "本地清理表单阳性日标签；不是滚动日级标签的别名"
+    },
+    "positivity": {
+      "en": "support for both treatment strategies under the specified conditions",
+      "zh": "给定条件下两种治疗策略都有实际支持"
+    },
+    "r0–4": {
+      "en": "zero-based repeat identifiers for daily and landmark tasks; not new patients",
+      "zh": "日级及固定时点任务的零起始重复编号；不是新增患者"
+    },
+    "r1–5": {
+      "en": "one-based repeat identifiers for the local cleaned-table contract; distinct from the zero-based splits",
+      "zh": "本地清理表合同的一起始重复编号；不同于零起始拆分"
+    },
+    "rank_cards": {
+      "en": "interface ordering evidence cards under fixed discussion rules, see explore/README",
+      "zh": "按固定讨论规则排序证据卡的接口，见 explore/README"
+    },
+    "rank_ci_support_ok": {
+      "en": "whether attribution-rank interval support requirements are met, see explore/README",
+      "zh": "归因排名区间的支持量要求是否满足，见 explore/README"
+    },
+    "screen": {
+      "en": "diagnostic screen with limited repeats; insufficient for promotion",
+      "zh": "重复次数有限的诊断初筛；不足以晋级"
+    },
+    "severity_proxy_S": {
+      "en": "severity-proxy field in historical action-evidence cards; exact categories not explained in this package, distinct from current-day slice S",
+      "zh": "历史行动证据卡的严重度代理字段；具体分类定义未随包解释，不是当日状态切片 S"
+    },
+    "site1": {
+      "en": "configuration identity of single-column centre encoding in spec_v1; see site_eb",
+      "zh": "spec_v1 中单列中心编码的配置身份；见 site_eb"
+    },
+    "site_eb": {
+      "en": "centre empirical-Bayes shrinkage encoding",
+      "zh": "中心经验贝叶斯收缩编码"
+    },
+    "source_path": {
+      "en": "original-project source location in MANIFEST; provenance, not an in-package runtime path",
+      "zh": "MANIFEST 中的原项目来源位置；仅溯源，不是包内运行路径"
+    },
+    "splits_v3": {
+      "en": "frozen stay-split table, see DATA_LAYOUT and TASKS",
+      "zh": "冻结住院划分表，见 DATA_LAYOUT 与 TASKS"
+    },
+    "spo2_daily_mean": {
+      "en": "synthetic daily-mean SpO2 field; includes only observations available by cutoff, see SCORER_SCHEMA",
+      "zh": "合成 SpO2 当日均值字段；仅汇总截止时点前可见观测，见 SCORER_SCHEMA"
+    },
+    "stage3_cards": {
+      "en": "stage 3 candidate-evidence aggregation interface, see explore/README",
+      "zh": "阶段 3 候选证据汇总接口，见 explore/README"
+    },
+    "stage4": {
+      "en": "stage 4 trial and causal-graph drafts, not treatment-effect estimation",
+      "zh": "阶段 4 试验与因果图草案，不是治疗效应估计"
+    },
+    "statscore": {
+      "en": "surgical risk-score field, see RESULTS; exact version requires the authorized dictionary",
+      "zh": "手术风险评分字段，见 RESULTS；具体版本以授权字典为准"
+    },
+    "time zero": {
+      "en": "time aligning eligibility, strategy assignment and follow-up start",
+      "zh": "资格、策略分配与随访起点对齐的时点"
+    },
+    "trial_skeleton": {
+      "en": "target-trial draft interface, see explore/README",
+      "zh": "目标试验草案接口，见 explore/README"
+    },
+    "validation_auc": {
+      "en": "inner-validation AUROC, see TEAM_USAGE",
+      "zh": "内层验证 AUROC，见 TEAM_USAGE"
+    },
+    "venv": {
+      "en": "Python virtual environment",
+      "zh": "Python 虚拟环境"
+    },
+    "w1": {
+      "en": "single-day calendar window",
+      "zh": "单日日历窗口"
+    },
+    "w3": {
+      "en": "three-day calendar window",
+      "zh": "三日日历窗口"
+    },
+    "w7": {
+      "en": "seven-day calendar window",
+      "zh": "七日日历窗口"
+    },
+    "xclamptime": {
+      "en": "aortic cross-clamp-time field, see RESULTS; units require the authorized dictionary",
+      "zh": "主动脉阻断时间字段，见 RESULTS；单位以授权字典为准"
+    },
+    "y3": {
+      "en": "daily-task first-recorded-outcome label over the next three days; the supplementary landmark model is fitted separately",
+      "zh": "日级任务随后三日首次登记结局标签；固定时点补充模型另行拟合"
+    },
+    "y30": {
+      "en": "alias for first in-hospital outcome in the thirty days after the landmark",
+      "zh": "固定时点后未来三十日首次院内结局标签别名"
+    },
+    "yB": {
+      "en": "older label from landmark to the postoperative observation-window end; distinct from a fixed-length endpoint",
+      "zh": "旧固定时点至术后观察窗口结束的标签；不同于固定长度终点"
+    },
+    "yB30": {
+      "en": "first in-hospital outcome in the thirty days after a fixed prediction time",
+      "zh": "固定预测时点之后三十日首次院内结局标签"
+    },
+    "z_days_since_*": {
+      "en": "derived days-since-record pattern; anchors and masking require derivation-code checks, see T5_FIELDS",
+      "zh": "距离既往记录的日数派生字段模式；起点和屏蔽须核对派生代码，见 T5_FIELDS"
+    },
+    "z_doa": {
+      "en": "days since admission, see RESULTS background/clock field table",
+      "zh": "入院后日数，见 RESULTS 的背景／时钟字段表"
+    },
+    "z_dol": {
+      "en": "age in days, see RESULTS background/clock field table",
+      "zh": "日龄，见 RESULTS 的背景／时钟字段表"
+    },
+    "z_pod": {
+      "en": "postoperative day, see RESULTS background/clock field table",
+      "zh": "术后日数，见 RESULTS 的背景／时钟字段表"
+    },
+    "z_post_surg": {
+      "en": "postoperative-stage indicator, see RESULTS background/clock field table",
+      "zh": "术后阶段指示，见 RESULTS 的背景／时钟字段表"
+    }
+  }
+}

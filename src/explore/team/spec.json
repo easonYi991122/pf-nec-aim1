@@ -1,0 +1,32 @@
+{
+  "id": "NX-H4-TEAM-v1",
+  "status": "development interfaces; controller freeze required before real runs",
+  "base_final_spec_unchanged": true,
+  "bank": "D5SAFE",
+  "sequence_recipes": ["GAIN50"],
+  "m1_recipes": ["GAIN50"],
+  "interface_windows": [3, 7],
+  "full_bank_neural_path": "not shipped: frozen R4 channel cap and full-bank multi-day prohibition",
+  "programs": {
+    "NX-T2-TABM-GAIN50-v1": {"learner": "TABM-R1", "recipe": "GAIN50", "windows": [3, 7]},
+    "NX-T2-GRUD-GAIN50-v1": {"learner": "GRUD-WINDOW", "recipe": "GAIN50", "windows": [3, 7]},
+    "NX-T3-POD02-SEQ-v1": {"learners": ["TCN", "GRU", "ORDERLESS_MLP"], "recipe": "GAIN50", "windows": [7], "evaluation_pod": [0, 2]}
+  },
+  "unassigned_interface": "CAUSAL-MS-CNN; no card authorizes its real-data fitting",
+  "selection": {"inner_folds": 3, "initializations": 3, "additional_hyperparameter_trials": 0},
+  "training": {"epochs_max": 60, "patience": 8, "tolerance": 0.0001, "batch_size": 512},
+  "proposal_caps": {
+    "T-2": {"neural_optimizer_fits": 210, "selector_tree_fits": 20, "reference_tree_fits": 40, "GPU_hours": 10, "CPU_hours": 8},
+    "T-3": {"neural_optimizer_fits": 180, "selector_tree_fits": 20, "reference_tree_fits": 40, "GPU_hours": 10, "CPU_hours": 8},
+    "T-4": {"model_fits": 400, "CPU_hours": 24, "GPU_hours": 0},
+    "T-5": {"model_fits": 0, "CPU_hours": 2, "GPU_hours": 0},
+    "T-6": {"real_outcome_fits": 0, "synthetic_configurations": 3, "CPU_hours": 4, "GPU_hours": 0}
+  },
+  "real_data_gate": {
+    "controller_signed_card": false,
+    "timing_audit_pass": false,
+    "clinical_alert_appendix_frozen": false,
+    "current_gpu_allocation_verified": false,
+    "automatic_real_run_authorization": false
+  }
+}

@@ -6,23 +6,23 @@
       "rewritten": false,
       "sha256": "68932c59e2a276febff87d15155b6fe59b69e6c14cc7e70ab2198684a77db241",
       "source_path": [
-        "03_code/tools/handoff/templates/gitignore"
+        "04_runs/agents/next_20261007/h4/builder/templates/gitignore"
       ]
     },
     {
       "path": "AGENTS.en.md",
       "rewritten": false,
-      "sha256": "89bb7e3efd3bc9364eae39534e8016aef38b76254f80590da1a6eecaf1d1f4f0",
+      "sha256": "f319e4ef07cbca2e74db3aa9f631f4b4304269b2433ce1714566ce15ebb160cd",
       "source_path": [
-        "03_code/tools/handoff/templates/AGENTS.en.md"
+        "04_runs/agents/next_20261007/h4/builder/templates/AGENTS.en.md"
       ]
     },
     {
       "path": "AGENTS.md",
       "rewritten": false,
-      "sha256": "c5fa5e6ffdd3e7026645a8c8658ae3525c425d88f4a61a3b9305f6bb5a8ed36b",
+      "sha256": "11b111dd628877ecb5da3919d056b7b7d0d311b8626b12102efa167dbce1fb67",
       "source_path": [
-        "03_code/tools/handoff/templates/AGENTS.md"
+        "04_runs/agents/next_20261007/h4/builder/templates/AGENTS.md"
       ]
     },
     {
@@ -30,23 +30,31 @@
       "rewritten": false,
       "sha256": "6ce433f6e93bd154686d4de1e39dd9f073e09d2745e85cb8a81ba84b7276b9b7",
       "source_path": [
-        "03_code/tools/handoff/templates/CLAUDE.md"
+        "04_runs/agents/next_20261007/h4/builder/templates/CLAUDE.md"
       ]
     },
     {
       "path": "README.en.md",
       "rewritten": false,
-      "sha256": "181a1ac251ef419daf3e10240a6f3d4c245d849a130fc8c2fa2521735b63f9d0",
+      "sha256": "c17b0dfb589439ec9e261227a520b681a2466aa9326ac4a122ab912e3cec127e",
       "source_path": [
-        "03_code/tools/handoff/templates/README.en.md"
+        "04_runs/agents/next_20261007/h4/builder/templates/README.en.md"
       ]
     },
     {
       "path": "README.md",
       "rewritten": false,
-      "sha256": "9cc32be4a3c8c277c38768c2f927565c981c8f8055fc95ee187d6358273288ed",
+      "sha256": "2b4fc94f21fc8203884c51c601d1e51c1b68b3dd5c640d9a0f3b4fdcc605e9bb",
       "source_path": [
-        "03_code/tools/handoff/templates/README.md"
+        "04_runs/agents/next_20261007/h4/builder/templates/README.md"
+      ]
+    },
+    {
+      "path": "docs/AIM2_LINKAGE_NOTE.md",
+      "rewritten": false,
+      "sha256": "b185a09abcda55a429bffb39af47865457fa1ae299fa7b6989589bebca4f4170",
+      "source_path": [
+        "04_runs/agents/next_20261007/h4/builder/templates/AIM2_LINKAGE_NOTE.md"
       ]
     },
     {
@@ -54,7 +62,7 @@
       "rewritten": false,
       "sha256": "6cd32733671762770e3381190c99960e4fd25059ab98f4a67170da28e228c2a6",
       "source_path": [
-        "03_code/tools/handoff/templates/DATA_LAYOUT.md"
+        "04_runs/agents/next_20261007/h4/builder/templates/DATA_LAYOUT.md"
       ]
     },
     {
@@ -62,7 +70,7 @@
       "rewritten": false,
       "sha256": "8fe50e8e7d41cd8e56e002e32683953977a8acd294d226cc8dbabfa6ca47a667",
       "source_path": [
-        "03_code/tools/handoff/templates/ENVIRONMENT.md"
+        "04_runs/agents/next_20261007/h4/builder/templates/ENVIRONMENT.md"
       ]
     },
     {
@@ -70,15 +78,15 @@
       "rewritten": false,
       "sha256": "fc2ae752b861ffa5aebd1fad6ee77da81d20e6740f9571e7e912f280ad5e662c",
       "source_path": [
-        "03_code/tools/handoff/templates/EVALUATION.md"
+        "04_runs/agents/next_20261007/h4/builder/templates/EVALUATION.md"
       ]
     },
     {
       "path": "docs/EXCLUDED.md",
       "rewritten": false,
-      "sha256": "933561055050dfc249d212eb70b2eec75dd09113f9d54c5db9565a1b10c16528",
+      "sha256": "70f49ab31a1a74ee1db5ac90eadd3fc51a7dd7fe830a4b7e46de8744216aeb26",
       "source_path": [
-        "03_code/tools/handoff/templates/EXCLUDED.md"
+        "04_runs/agents/next_20261007/h4/builder/templates/EXCLUDED.md"
       ]
     },
     {
@@ -86,7 +94,7 @@
       "rewritten": false,
       "sha256": "0f719ea139c59086b8d673bd59d8dcfdda29f398f25f2bce590f162dd99f262d",
       "source_path": [
-        "03_code/tools/handoff/templates/GLOSSARY.md"
+        "04_runs/agents/next_20261007/h4/builder/templates/GLOSSARY.md"
       ]
     },
     {
@@ -94,23 +102,39 @@
       "rewritten": false,
       "sha256": "c2536425af2a33a68a8c388311e7355c9b6c6b37afdc711642367a7b709454f8",
       "source_path": [
-        "03_code/tools/handoff/templates/REFERENCES.md"
+        "04_runs/agents/next_20261007/h4/builder/templates/REFERENCES.md"
       ]
     },
     {
       "path": "docs/RESULTS.md",
       "rewritten": false,
-      "sha256": "fa3b0f3bbf2d1c497ba1a2c217385b247455679344b5a1363627a7cf9a6a3269",
+      "sha256": "198145752ee93854fa53c99abe311b02c3502bee085ad59544fdd10081432a67",
       "source_path": [
-        "03_code/tools/handoff/templates/RESULTS.md"
+        "04_runs/agents/next_20261007/h4/builder/templates/RESULTS.md"
+      ]
+    },
+    {
+      "path": "docs/SCORER_SCHEMA.md",
+      "rewritten": false,
+      "sha256": "8608a605d5ddf85b23fa30fe66e276c45ea7a5f8b6b235e0405b3a1a66f22968",
+      "source_path": [
+        "04_runs/agents/next_20261007/h4/builder/templates/SCORER_SCHEMA.md"
       ]
     },
     {
       "path": "docs/STATUS_AND_NEXT.md",
       "rewritten": false,
-      "sha256": "efdadbd325560e8ee74cf82fb4cac5bbb497b00d7dde2b5ba62d436a04e07ada",
+      "sha256": "7af50967fb8856ad3790f81c89471df33377e3204aa7ad185d98d83150631f51",
       "source_path": [
-        "03_code/tools/handoff/templates/STATUS_AND_NEXT.md"
+        "04_runs/agents/next_20261007/h4/builder/templates/STATUS_AND_NEXT.md"
+      ]
+    },
+    {
+      "path": "docs/T5_FIELDS.md",
+      "rewritten": false,
+      "sha256": "997da1a73b9a8c68b82e0f26cd8285da84d2bfcfedfa48f8c967962763e0f116",
+      "source_path": [
+        "04_runs/agents/next_20261007/h4/builder/templates/T5_FIELDS.md"
       ]
     },
     {
@@ -118,7 +142,39 @@
       "rewritten": false,
       "sha256": "990b14c7de816e1819d0e20135f6215ea9bd6b094787375d3300b4f85d81bd68",
       "source_path": [
-        "03_code/tools/handoff/templates/TASKS.md"
+        "04_runs/agents/next_20261007/h4/builder/templates/TASKS.md"
+      ]
+    },
+    {
+      "path": "docs/TEAM_TASKS.md",
+      "rewritten": false,
+      "sha256": "f762d0a9bc22cf45a75d116e52b64d40e53cac93280ee608169eef24d870c0f2",
+      "source_path": [
+        "04_runs/agents/next_20261007/h4/builder/templates/TEAM_TASKS.md"
+      ]
+    },
+    {
+      "path": "docs/TEAM_USAGE.md",
+      "rewritten": false,
+      "sha256": "f43de0faf2ae20435a45ac9571b658b0d45f8e0bd69dce37e15486f42edf4311",
+      "source_path": [
+        "04_runs/agents/next_20261007/h4/builder/templates/TEAM_USAGE.md"
+      ]
+    },
+    {
+      "path": "docs/U2_CONTRACT_SUMMARY.md",
+      "rewritten": false,
+      "sha256": "ed72d5a394a1e26f483951d35bdfb5e1987f037067c30cbbff380eabc03f398b",
+      "source_path": [
+        "04_runs/agents/next_20261007/h4/builder/templates/U2_CONTRACT_SUMMARY.md"
+      ]
+    },
+    {
+      "path": "docs/en/AIM2_LINKAGE_NOTE.md",
+      "rewritten": false,
+      "sha256": "31912df0e08c5495ea6aa94e6a392cb085d890c0e0d748fbb58601a4c6169d9c",
+      "source_path": [
+        "04_runs/agents/next_20261007/h4/builder/templates/AIM2_LINKAGE_NOTE.en.md"
       ]
     },
     {
@@ -126,7 +182,7 @@
       "rewritten": false,
       "sha256": "116d31dd15fa01c5ffaa2bc6f0e1c8676e15677fcd0d9214331cdd8922554440",
       "source_path": [
-        "03_code/tools/handoff/templates/DATA_LAYOUT.en.md"
+        "04_runs/agents/next_20261007/h4/builder/templates/DATA_LAYOUT.en.md"
       ]
     },
     {
@@ -134,7 +190,7 @@
       "rewritten": false,
       "sha256": "21313a6185fa87ff746e058b0a9eb092a23fbb403cba0aac06775823ae08b7ae",
       "source_path": [
-        "03_code/tools/handoff/templates/ENVIRONMENT.en.md"
+        "04_runs/agents/next_20261007/h4/builder/templates/ENVIRONMENT.en.md"
       ]
     },
     {
@@ -142,15 +198,15 @@
       "rewritten": false,
       "sha256": "5b87014dca31e04f3d85cee0cc41f93d33e8c820ecbcc2f9688fc06d00a12801",
       "source_path": [
-        "03_code/tools/handoff/templates/EVALUATION.en.md"
+        "04_runs/agents/next_20261007/h4/builder/templates/EVALUATION.en.md"
       ]
     },
     {
       "path": "docs/en/EXCLUDED.md",
       "rewritten": false,
-      "sha256": "81c5719e8594bb3bc7e39a421a476b536395c429ed9c7e048cd3a6b4fa1878cb",
+      "sha256": "26ae538e0d27885120bb6246f53f6b90a55b70f89f42aa846f3902ecf350c437",
       "source_path": [
-        "03_code/tools/handoff/templates/EXCLUDED.en.md"
+        "04_runs/agents/next_20261007/h4/builder/templates/EXCLUDED.en.md"
       ]
     },
     {
@@ -158,7 +214,7 @@
       "rewritten": false,
       "sha256": "497831312f5083dfcd1d72b5b01cc0c8222df70af5da0d1bbe0b71c14cfdca32",
       "source_path": [
-        "03_code/tools/handoff/templates/GLOSSARY.en.md"
+        "04_runs/agents/next_20261007/h4/builder/templates/GLOSSARY.en.md"
       ]
     },
     {
@@ -166,23 +222,39 @@
       "rewritten": false,
       "sha256": "ba177ab4f8c113ccdb96bc01e1f1c9e956ba9f730c816dc2070924744bf6c4f0",
       "source_path": [
-        "03_code/tools/handoff/templates/REFERENCES.en.md"
+        "04_runs/agents/next_20261007/h4/builder/templates/REFERENCES.en.md"
       ]
     },
     {
       "path": "docs/en/RESULTS.md",
       "rewritten": false,
-      "sha256": "844038507a58a35866d407dc2f5aebc0519034f61a7fa18a486ff829176a5695",
+      "sha256": "8d02304e6a7053fe65615a5a961b13d7727945d822413e8ebcd26317ae963a49",
       "source_path": [
-        "03_code/tools/handoff/templates/RESULTS.en.md"
+        "04_runs/agents/next_20261007/h4/builder/templates/RESULTS.en.md"
+      ]
+    },
+    {
+      "path": "docs/en/SCORER_SCHEMA.md",
+      "rewritten": false,
+      "sha256": "5d1d78acc5e2c49030877a477c6f3d25ca35866873101f15d9a0af24255756b4",
+      "source_path": [
+        "04_runs/agents/next_20261007/h4/builder/templates/SCORER_SCHEMA.en.md"
       ]
     },
     {
       "path": "docs/en/STATUS_AND_NEXT.md",
       "rewritten": false,
-      "sha256": "193c3d95e76b55feb85937e93c41258df37614b9e2e00d9eaf6f8bc316c5f8e1",
+      "sha256": "8af2608c7527f8b325400835407b2b34250b955cba49bcf88715edda58492fc5",
       "source_path": [
-        "03_code/tools/handoff/templates/STATUS_AND_NEXT.en.md"
+        "04_runs/agents/next_20261007/h4/builder/templates/STATUS_AND_NEXT.en.md"
+      ]
+    },
+    {
+      "path": "docs/en/T5_FIELDS.md",
+      "rewritten": false,
+      "sha256": "997da1a73b9a8c68b82e0f26cd8285da84d2bfcfedfa48f8c967962763e0f116",
+      "source_path": [
+        "04_runs/agents/next_20261007/h4/builder/templates/T5_FIELDS.en.md"
       ]
     },
     {
@@ -190,15 +262,39 @@
       "rewritten": false,
       "sha256": "8f4858ee2aed756b8f733f046df17dcb67121ae2be0150277ed5cc4d5c2028b1",
       "source_path": [
-        "03_code/tools/handoff/templates/TASKS.en.md"
+        "04_runs/agents/next_20261007/h4/builder/templates/TASKS.en.md"
+      ]
+    },
+    {
+      "path": "docs/en/TEAM_TASKS.md",
+      "rewritten": false,
+      "sha256": "51e894a51840e287f67705659a46c6abfd5597b2b3198794aac597b01360de73",
+      "source_path": [
+        "04_runs/agents/next_20261007/h4/builder/templates/TEAM_TASKS.en.md"
+      ]
+    },
+    {
+      "path": "docs/en/TEAM_USAGE.md",
+      "rewritten": false,
+      "sha256": "627590e5798183d531193cdc86c40c849205f5d6f259d81783ffd7b365bef318",
+      "source_path": [
+        "04_runs/agents/next_20261007/h4/builder/templates/TEAM_USAGE.en.md"
+      ]
+    },
+    {
+      "path": "docs/en/U2_CONTRACT_SUMMARY.md",
+      "rewritten": false,
+      "sha256": "1061a21156968c0e8be65e471db36a42db9d5f711d40d07144561c22fd39c086",
+      "source_path": [
+        "04_runs/agents/next_20261007/h4/builder/templates/U2_CONTRACT_SUMMARY.en.md"
       ]
     },
     {
       "path": "env/requirements-linux.txt",
       "rewritten": false,
-      "sha256": "afeb9b9a5e1edbcae1319871989fdd726e9143518d775ea1828d12416d831145",
+      "sha256": "945746f816ce877441fc2da134c3b17a93b68552ea00a22dd26e7d917af3ad9d",
       "source_path": [
-        "03_code/tools/handoff/templates/requirements-linux.txt"
+        "04_runs/agents/next_20261007/h4/builder/templates/requirements-linux.txt"
       ]
     },
     {
@@ -212,25 +308,25 @@
     {
       "path": "explore/README.en.md",
       "rewritten": false,
-      "sha256": "84a4f53b338b20e35a17f44515a6f91797b829af395daf03f3ec712c244dfa91",
+      "sha256": "dfd296fa0cb18cca2b55541457f2f798002366f18b9d3ee08194f9fe5c3781bc",
       "source_path": [
-        "03_code/tools/handoff/templates/EXPLORE.en.md"
+        "04_runs/agents/next_20261007/h4/builder/templates/EXPLORE.en.md"
       ]
     },
     {
       "path": "explore/README.md",
       "rewritten": false,
-      "sha256": "95b5a7d713c633e34bc34b926cbea23ab4c9eeab234dc5330ca0e9fe3e97eb27",
+      "sha256": "7053c89a9e2608e30379cc96644e3f3f2a4797d290bb879f30dc8adc73255a7a",
       "source_path": [
-        "03_code/tools/handoff/templates/EXPLORE.md"
+        "04_runs/agents/next_20261007/h4/builder/templates/EXPLORE.md"
       ]
     },
     {
       "path": "pyproject.toml",
       "rewritten": false,
-      "sha256": "22d8d8c402572db9d613031dd096ee1a6347842f64f097bdc391107f4b51080a",
+      "sha256": "a5bb6705dc8338de97af54f1f6df0b16dd737f5ea986ea9a6b9fa10115869d10",
       "source_path": [
-        "03_code/tools/handoff/templates/pyproject.toml"
+        "04_runs/agents/next_20261007/h4/builder/templates/pyproject.toml"
       ]
     },
     {
@@ -238,7 +334,7 @@
       "rewritten": false,
       "sha256": "7bde1a0b2e600d709e1f5be695341db1e131e681af8947ca2aa27117a40e56c1",
       "source_path": [
-        "03_code/tools/handoff/templates/pytest.ini"
+        "04_runs/agents/next_20261007/h4/builder/templates/pytest.ini"
       ]
     },
     {
@@ -263,7 +359,7 @@
       "sha256": "fe0302584cc062cfc7f7091e8f43e2d62bf9cb304b1aca1483e7d65d6e5f5abf",
       "source_path": [
         "03_code/exp/redo_20261003/aim1b/stage12.py",
-        "03_code/tools/handoff/templates/aim1b12_cli.py"
+        "04_runs/agents/next_20261007/h4/builder/templates/aim1b12_cli.py"
       ]
     },
     {
@@ -272,7 +368,7 @@
       "sha256": "cb1784d56cf31ab0559e8df1c4fd55a8e089c1a4aa25de578abebf2f9787fd58",
       "source_path": [
         "03_code/exp/redo_20261003/aim1b/stage34.py",
-        "03_code/tools/handoff/templates/aim1b34_cli.py"
+        "04_runs/agents/next_20261007/h4/builder/templates/aim1b34_cli.py"
       ]
     },
     {
@@ -290,7 +386,7 @@
       "source_path": [
         "03_code/exp/redo_20261003/diagnostics_t4.py",
         "03_code/exp/redo_20261003_hooks_sequence.py",
-        "03_code/tools/handoff/templates/i7_cli.py"
+        "04_runs/agents/next_20261007/h4/builder/templates/i7_cli.py"
       ]
     },
     {
@@ -306,7 +402,7 @@
       "rewritten": false,
       "sha256": "0147bafa49df8c456d11993afea7d39be5eef4ec9b56d8761d6e260f0f0acba6",
       "source_path": [
-        "03_code/tools/handoff/templates/t3_hook.py"
+        "04_runs/agents/next_20261007/h4/builder/templates/t3_hook.py"
       ]
     },
     {
@@ -326,6 +422,49 @@
       ]
     },
     {
+      "path": "src/explore/team/__init__.py",
+      "rewritten": true,
+      "sha256": "d2e23ead7a1d5a8ab4b1d8365e7193032d752c2f1b8207dfab03ba936fe71a08",
+      "source_path": [
+        "generated:package-init"
+      ]
+    },
+    {
+      "path": "src/explore/team/inputs.py",
+      "rewritten": false,
+      "sha256": "cecd8528da27e64c0bbc93380e54d13259f17dda7cdc2d79ded78de68321e029",
+      "source_path": [
+        "04_runs/agents/next_20261007/h4/builder/templates/team_inputs.py"
+      ]
+    },
+    {
+      "path": "src/explore/team/sequence.py",
+      "rewritten": true,
+      "sha256": "948b772d38551197c6bf1c139023a3fe0b250c1e13ca474f425af87a4c4dc6d3",
+      "source_path": [
+        "03_code/exp/redo_20261003/sequence.py",
+        "04_runs/agents/next_20261007/h4/builder/templates/team_spec.json"
+      ]
+    },
+    {
+      "path": "src/explore/team/sequence_m1.py",
+      "rewritten": true,
+      "sha256": "0d79ccabb9bcb0ff782390f7f0a5ded001e48bbfc5972751746103f8444d574b",
+      "source_path": [
+        "03_code/exp/redo_20261003/sequence_m1.py",
+        "03_code/exp/redo_20261003/sequence.py",
+        "04_runs/agents/next_20261007/h4/builder/templates/team_spec.json"
+      ]
+    },
+    {
+      "path": "src/explore/team/spec.json",
+      "rewritten": false,
+      "sha256": "43d3c6ada7a5242165d97e7fc88375198e9b5a99a112191e969583f28f340ca7",
+      "source_path": [
+        "04_runs/agents/next_20261007/h4/builder/templates/team_spec.json"
+      ]
+    },
+    {
       "path": "src/pf_nec/__init__.py",
       "rewritten": true,
       "sha256": "d2e23ead7a1d5a8ab4b1d8365e7193032d752c2f1b8207dfab03ba936fe71a08",
@@ -338,7 +477,7 @@
       "rewritten": false,
       "sha256": "1f70118ff6af3478646e6253c398fd3af14a4ba20084b021fef76be804aa6505",
       "source_path": [
-        "03_code/tools/handoff/templates/cli.py"
+        "04_runs/agents/next_20261007/h4/builder/templates/cli.py"
       ]
     },
     {
@@ -346,13 +485,13 @@
       "rewritten": false,
       "sha256": "d62f93997ecf6c53cacb3303a1cf6325844bb1086c7c58657ea54024d5382f1a",
       "source_path": [
-        "03_code/tools/handoff/templates/config.py"
+        "04_runs/agents/next_20261007/h4/builder/templates/config.py"
       ]
     },
     {
       "path": "src/pf_nec/contract.py",
       "rewritten": true,
-      "sha256": "a8ce75fa0777d8773bb493a844dd10205294c53addccc783eb71cf0208fab91d",
+      "sha256": "91543e4f4b58f5248931ed2f1f73cf2e9d713e8ce6ee1b6ae3712b7bbb41709f",
       "source_path": [
         "03_code/exp/redo_20261003/contract.py"
       ]
@@ -362,7 +501,7 @@
       "rewritten": false,
       "sha256": "77e85d58ba601fda3e83ac4ac5fae380a372268443f3418a625db960db3419dd",
       "source_path": [
-        "03_code/tools/handoff/templates/data.py"
+        "04_runs/agents/next_20261007/h4/builder/templates/data.py"
       ]
     },
     {
@@ -426,7 +565,7 @@
       "rewritten": false,
       "sha256": "5dbfdb4120261deb781cbfe3152c15624cdcb202550e261d3c5111838723712b",
       "source_path": [
-        "03_code/tools/handoff/templates/inference.py"
+        "04_runs/agents/next_20261007/h4/builder/templates/inference.py"
       ]
     },
     {
@@ -467,7 +606,7 @@
       "sha256": "a1efb59320ddcf5959b7ecbee7ac1d61081f4dbd444a7fa44e90333719d8eac5",
       "source_path": [
         "03_code/exp/pirep/core.py",
-        "03_code/tools/handoff/templates/core_io.py"
+        "04_runs/agents/next_20261007/h4/builder/templates/core_io.py"
       ]
     },
     {
@@ -524,7 +663,7 @@
       "sha256": "9f24f65a428086a68c83e52021fe974f24a6ed826708118ba24c07d61d927ef7",
       "source_path": [
         "03_code/exp/redo_20261003/run.py",
-        "03_code/tools/handoff/templates/providers.py"
+        "04_runs/agents/next_20261007/h4/builder/templates/providers.py"
       ]
     },
     {
@@ -556,7 +695,7 @@
       "rewritten": false,
       "sha256": "d879384f1681d5229470e561427686cf257ccdb2bc2c978a075beb5db26f72ef",
       "source_path": [
-        "03_code/tools/handoff/templates/verify.py"
+        "04_runs/agents/next_20261007/h4/builder/templates/verify.py"
       ]
     },
     {
@@ -572,7 +711,7 @@
       "rewritten": false,
       "sha256": "c0a3220ce30806e3d9cf8356e3a7f586b4993b81bb7a745ac537d46e45b1f260",
       "source_path": [
-        "03_code/tools/handoff/templates/conftest.py"
+        "04_runs/agents/next_20261007/h4/builder/templates/conftest.py"
       ]
     },
     {
@@ -588,15 +727,15 @@
       "rewritten": false,
       "sha256": "3af702e8ae6cf554a551f5471657cf52aaf8c9a5d55c34cb204b9a2837d7fdb0",
       "source_path": [
-        "03_code/tools/handoff/templates/test_data.py"
+        "04_runs/agents/next_20261007/h4/builder/templates/test_data.py"
       ]
     },
     {
       "path": "tests/test_doc_examples.py",
       "rewritten": false,
-      "sha256": "8db6ddefdc2480d7fdd0c3f327c54afe778904fdfb836bf17ebdac2aeadbf70e",
+      "sha256": "8ae55001a28e650e0620b80e82d6a3159d8a22f4ea9cc3d425ede3e48c02a3c7",
       "source_path": [
-        "03_code/tools/handoff/templates/test_doc_examples.py"
+        "04_runs/agents/next_20261007/h4/builder/templates/test_doc_examples.py"
       ]
     },
     {
@@ -612,15 +751,15 @@
       "rewritten": false,
       "sha256": "6bc8c1f110d0a72f12b6be8910cca2065af5d775891ce0dd9c472efa65a0d306",
       "source_path": [
-        "03_code/tools/handoff/templates/test_explore.py"
+        "04_runs/agents/next_20261007/h4/builder/templates/test_explore.py"
       ]
     },
     {
       "path": "tests/test_final.py",
       "rewritten": false,
-      "sha256": "f88322e157675028ad0fbb4a30402ce7195ee2abe3c1125d57eb705de84d5787",
+      "sha256": "12fab472f7f62fa18fab03fd80e42d40995fc80702e7b66f48421128353d7ae6",
       "source_path": [
-        "03_code/tools/handoff/templates/test_final.py"
+        "04_runs/agents/next_20261007/h4/builder/templates/test_final.py"
       ]
     },
     {
@@ -629,7 +768,7 @@
       "sha256": "9a7d4197d1a854975ff39b83f125f98f72171356b10f78e603a0682faaa59d83",
       "source_path": [
         "03_code/exp/redo_20261003/tests/test_hooks_gsafe_t3.py",
-        "03_code/tools/handoff/templates/synthetic_engine.py"
+        "04_runs/agents/next_20261007/h4/builder/templates/synthetic_engine.py"
       ]
     },
     {
@@ -637,7 +776,7 @@
       "rewritten": false,
       "sha256": "1fb2785b13d1642225586eca8299e89eed7b966e3ed51e211992491167f4d20f",
       "source_path": [
-        "03_code/tools/handoff/templates/test_inference.py"
+        "04_runs/agents/next_20261007/h4/builder/templates/test_inference.py"
       ]
     },
     {
@@ -647,10 +786,34 @@
       "source_path": [
         "03_code/exp/redo_20261003/tests/test_t3_fast.py"
       ]
+    },
+    {
+      "path": "tests/test_team.py",
+      "rewritten": false,
+      "sha256": "52209dbd5f0cebef1d662237345ac281e9da8dd8b49769a8b41181b23f0c9b54",
+      "source_path": [
+        "04_runs/agents/next_20261007/h4/builder/templates/test_team.py"
+      ]
+    },
+    {
+      "path": "tests/test_team_m1.py",
+      "rewritten": true,
+      "sha256": "59387f6057a9dd8cdb208816e01b10f9aae228be1500f74e269bbd4ec16c49bd",
+      "source_path": [
+        "03_code/exp/redo_20261003/tests/test_sequence_m1.py"
+      ]
+    },
+    {
+      "path": "tests/test_team_sequence.py",
+      "rewritten": true,
+      "sha256": "187224310121477f136373883a9b05bc1051879c7b963dcb20c8f3333bb2d604",
+      "source_path": [
+        "03_code/exp/redo_20261003/tests/test_sequence.py"
+      ]
     }
   ],
   "manifest_self_excluded": true,
   "schema": 1,
   "source_path_role": "provenance only; paths are not shipped dependencies",
-  "version": "RX-H3b-v1"
+  "version": "NX-H4c-v1"
 }

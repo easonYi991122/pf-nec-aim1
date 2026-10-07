@@ -14,7 +14,9 @@
 |Full historical T3 report driver|Bound to excluded models / evidence|Retain interpret, t3_fast and G-safe read-only packet methods, not full historical report reconstruction|
 |I7 original curve-training driver|Excluded family dependency|Retain 8-background-variable slices, nested sampling and statistics; freeze new curves separately|
 |Aim 1b historical report assembly / evidence loading|Methods-only handoff|Support measurement, timing, eligibility, positivity, stage3_cards, trial_skeleton, draft_dag and rank_cards; schema in explore/README; no bundled historical evidence or effect estimate|
-|Sequence / M1 / GPU training code|Did not pass the pre-specified gate and adds historical dependencies|Retain results and stopping boundaries only; search-pause conditions in STATUS_AND_NEXT|
+|Historical full sequence / M1 selection menus and scheduling|Mix excluded inputs with historical outer-test selection; silently deleting menus would misrepresent the program|Original programs cannot be rerun; independent learners and D5-safe / GAIN paths ship under new identities; see TEAM_TASKS|
+|Full D5 neural input: not shipped|The frozen window gate prohibits full-bank multi-day concatenation; the R4 channel cap also excludes the full bank|Retain child-local GAIN50 from D5-safe and existing full-column tree references; do not modify the window gate|
+|Complete new-task drivers: not shipped|Scoring masks, joint family, alert policies and real-run approval belong to contracts awaiting freeze|Only single-fit / apply interfaces; POD0–2 scoring adapter, joint comparisons and new Task B driver are not shipped; prototypes cannot claim execution of new tasks|
 |Data, dictionary, caches, weights, predictions, row logs, hosts / credentials and internal agent tools|Code-sharing boundary|Patient-level outputs remain in authorised private locations|
 
 T3 PI10 is a fixed 10-variable interpretation group in the original frozen spec, assembled from internal T007 tables; it is not read from a trained model and exposes no source-bank learner. T007 is an internal report, not shipped; its relevant use is explained here.

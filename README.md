@@ -13,9 +13,9 @@ English: [README.en.md](README.en.md)。双语约定：`docs/<NAME>.md` 为中�
 
 ## 我们停在哪里
 
-〔推断〕模型用途尚未定义：谁在何时看到风险、随后改变什么？〔建议〕优先做 A1 用途对应评价、A2 简单术时评分与日级模型的正式比较、A3 留出整个中心的验证。结构类搜索暂停；用途改变主指标或新信息支持预先冻结的新问题后再考虑重启。详见 [STATUS_AND_NEXT](docs/STATUS_AND_NEXT.md)。
+〔推断〕模型用途尚未定义：谁在何时看到风险、随后改变什么？〔建议〕优先做 A1 用途对应评价、A2 术时评分与日级模型比较、A3 中心留出评价。〔批准的决定〕按 DEC-019 暂停主线结构搜索；以下任一条件可支持重启：可区分的新机制，并冻结指标、预算与停止规则；与 PI 的用途讨论改变主指标；新数据或信息源提供可信证据。新架构名称或新种子本身不够。T-2/T-3 允许按各自冻结卡推进，见 [TEAM_TASKS](docs/TEAM_TASKS.md)。详见 [STATUS_AND_NEXT](docs/STATUS_AND_NEXT.md)。
 
-〔建议〕Aim 1b 优先讨论胸骨关闭时机，外周动脉线拔除为条件性备选；待 PI 回答 7 问后才冻结。Aim 2 本轮无新工作；B2 阶段混合评价的方法学线索保留。
+〔建议〕Aim 1b 优先讨论胸骨关闭时机，外周动脉线拔除为条件性备选；待 PI 回答 7 问后才冻结。〔事实〕B1 文献侦察已完成（不是系统综述）：无链接键时只能重算登记评分或在信号队列内部蒸馏，个体级融合需要持有双方数据的机构经授权链接。未做 Aim 2 建模，下一步仅为合成接口规格／原型与治理准备，见 [AIM2_LINKAGE_NOTE](docs/AIM2_LINKAGE_NOTE.md)。B2 阶段混合评价线索保留。
 
 〔事实〕请分开读三个集合：**最终模型**见上表；**未达到预设晋级门槛的候选**（T8、T4、M1、Task A 程序）见 [RESULTS](docs/RESULTS.md) 的效应量和区间；**探索性分析与脚手架**（T3、I7、Aim 1b）见 [explore](explore/README.md)。重要性和改动输入后的分数不是治疗效应。
 
@@ -54,4 +54,4 @@ python -m pf_nec.cli evaluate --model A-D5-LGB --repeats 0 1 2 3 4 --descriptive
 
 〔事实〕历史 H1 从输入重建的 13 张表一致；A-D5-LGB r0/f0 与 GSAFE-LGB r1 做过真实等价性抽查。A 极小预测差与舍入相容（consistent with rounding）；详见 ENVIRONMENT。这些抽查不代表完整重复、Linux 或 Windows 已重跑，也不构成独立验证。合成测试覆盖三条模型路径、因果时序不变性、评价和卡片接口。
 
-先读 [TASKS](docs/TASKS.md) 和 [RESULTS](docs/RESULTS.md)，再读 STATUS_AND_NEXT。共享排除范围见 [EXCLUDED](docs/EXCLUDED.md)，书目和内部来源解释见 [REFERENCES](docs/REFERENCES.md)。MANIFEST 的 source_path 仅为溯源，不是运行依赖。人员与编码 agent 都遵守 [AGENTS](AGENTS.md)／[AGENTS.en](AGENTS.en.md)；CLAUDE 指向同一规则。
+先读 [TASKS](docs/TASKS.md) 和 [RESULTS](docs/RESULTS.md)，再读 STATUS_AND_NEXT；队友开工看 [TEAM_TASKS](docs/TEAM_TASKS.md)。共享排除范围见 [EXCLUDED](docs/EXCLUDED.md)，书目和内部来源解释见 [REFERENCES](docs/REFERENCES.md)。MANIFEST 的 source_path 仅为溯源，不是运行依赖。人员与编码 agent 都遵守 [AGENTS](AGENTS.md)／[AGENTS.en](AGENTS.en.md)；CLAUDE 指向同一规则。

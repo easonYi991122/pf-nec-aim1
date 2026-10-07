@@ -1,0 +1,31 @@
+# Aim 2: connecting registry and signal information
+
+Version: NX-H4c-v1; scouting date: 2026-10-07. Literature scouting is complete but is not a systematic review. This revision organizes the existing scouting without network access or fresh full-text verification. Only public papers listed in that scouting are cited below; “snippet only” means a search excerpt, unverified and not an established fact.
+
+## Current conclusion and deliverables
+
+Without a linkage key, help is indirect only: recompute the registry score from aligned definitions within the signal cohort as a baseline or prior; or distil a full-resolution signal model into a daily-summary model using the same individuals within that cohort. Neither creates cross-cohort patient correspondence. Check input availability, day-end timing, calibration drift and prior patient overlap before making any external-validation claim.
+
+T-6 now delivers (a) a variable-definition, unit and availability-time alignment table, (b) a fully synthetic score-recomputation and signal-interface prototype, and (c) linkage-governance questions. The prototype requires an anchor-only control using gestational age, diagnosis, surgery type and POD only, so anchor prediction is not mislabelled as fusion gain. See [TEAM_TASKS](TEAM_TASKS.md) for the contract and null-result acceptance, and [GLOSSARY](GLOSSARY.md) for POD, IRB, DUA and other terms.
+
+The project uses are U1 dynamic warning and U2 treatment-improvement space. Risk stratification prepares for the latter; signal-derived readiness / condition information does not identify treatment effects by itself. B1 priority rises if dynamic gain proves small. The current first stage is “interface specification and open-items table”; see [SCORER_SCHEMA](SCORER_SCHEMA.md). No Aim 2 modelling was done this round; next steps are synthetic and governance preparation only.
+
+## Public evidence and applicability limits
+
+The scouting found no study directly demonstrating mutual benefit from unlinked congenital-heart / neonatal intensive-care registry and high-frequency signal data. This is a limited-search finding, not proof that no such study exists. Applying the methods below to this project is inference; performance and linkage rates from other populations are not transferred.
+
+|Public paper|Supported direction|Scouting verification status and limitation|
+|---|---|---|
+|[Kausch et al.: Cardiorespiratory signatures of necrotizing enterocolitis: a 4 NICU study](https://profiles.wustl.edu/en/publications/cardiorespiratory-signatures-of-necrotizing-enterocolitis-a-4-nic/)|Cardiorespiratory signals carry NEC-risk information, motivating signal-side prediction.|Institutional abstract of a peer-reviewed study was read; preterm population, without evidence for unlinked fusion in congenital heart disease.|
+|[DeWitt et al.: Splanchnic Near-Infrared Spectroscopy and Necrotizing Enterocolitis After Neonatal Heart Surgery](https://pmc.ncbi.nlm.nih.gov/articles/PMC4368901)|Postoperative splanchnic oxygenation offers a clinical lead for signal exploration.|The public article was read during scouting; the NEC subgroup is very small, without establishing incremental prediction or treatment effects.|
+|[Lopez-Paz et al.: Unifying distillation and privileged information](https://arxiv.org/abs/1511.03643)|Methodological background for teacher / student information transfer on the same individuals.|Conference methods paper cited by scouting; full text not checked in this revision. Within-signal-cohort distillation is a project inference, not permission to pair unlinked cohorts.|
+|[Gupta et al.: Better Together: Leveraging Unpaired Multimodal Data for Stronger Unimodal Models](https://arxiv.org/abs/2510.08492)|Unpaired representation learning is candidate-method background only; distinguish anchor information from additional information.|Preprint with abstract read; demonstrations use image, text and audio, with no clinical time-series validation found or basis for promising clinical benefit.|
+|[PC4 / T3 single-centre physiology study](https://pmc.ncbi.nlm.nih.gov/articles/PMC9207151/)|Suggests a possible precedent for in-hospital linkage where both sources are held.|snippet only; full-text fetch failed and linkage methods are unverified. The scout’s local-identifier description is not a confirmed method from this paper and supplies no project linkage-rate estimate.|
+|[Vertical Federated Learning: Concepts, Advances and Challenges](https://arxiv.org/pdf/2211.12814)|Vertical federation requires aligning complementary fields for the same individuals; it cannot create a missing join key.|Listed by scouting as a preprint survey, with no full-text check in this revision; methodological background is not neonatal NEC efficacy evidence.|
+|[Multicentre federated study of retinopathy of prematurity](https://pmc.ncbi.nlm.nih.gov/articles/PMC9357070)|Horizontal federation is background for projects with participating sites.|snippet only; full text and exact metrics were not verified by scouting. Retinal imaging does not establish registry-to-signal linkage or NEC improvement.|
+
+## Governance boundaries and options
+
+Individual-level fusion requires an institution holding both original sources to appoint an honest broker, link by MRN (medical record number), obtain IRB approval and amend the DUA. Ask who holds both sources and the crosswalk / real dates, how false / missed links and training-population overlap will be audited, and which fields can be released. Existing de-identified copies cannot support source-identifier tokenization; pending institutional answers are a valid unresolved deliverable, not assumed authorization or linkage.
+
+Statistical matching / synthetic linkage is not acceptable for prediction; it may only provide partial-identification sensitivity bounds: conditional independence given shared anchors is untestable and may erase or manufacture the NEC–signal association of interest. Vertical federation still needs a join key; horizontal federation is optional only when new partner sites join. A fully synthetic Mac pseudo-site simulation is also optional within the card budget and tests algorithm interfaces only. Federation does not replace timing audits, validation separation or handling of time-varying confounding.

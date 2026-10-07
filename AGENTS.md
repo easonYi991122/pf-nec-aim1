@@ -3,6 +3,8 @@
 English: [AGENTS.en.md](AGENTS.en.md)。先读 README、TASKS 与 STATUS_AND_NEXT；双语目录规则见 README。
 
 - 原始数据只读，只用已有 DUA／IRB 授权的数据。患者级表、缓存、模型和预测不得进入 Git；仅写 PF_CACHE_ROOT 或 PF_RUN_DIR。
+- 主控批准研究与真实运行，队友在获授权主机上执行。患者级数据若需在已登记主机以外使用，须先经用户和 PI 按 DUA 确认；不得把任务卡或默认路径当作传输授权。
+
 - 外部路径只通过 `src/pf_nec/config.py` 的环境变量解析。真实运行显式设置 PF_DATA_ROOT；路径默认值不代表授权。
 - 不改冻结 spec、特征规则、种子、风险集或评价器以追求一致或更高指标。新研究另立版本，不复用已使用的锁定集声称独立验证。
 - 先跑合成测试。Task A 每次先合并 5 折 OOF，再对重复等权；PI 同时报总体与术后。不得跨合同比较 AUROC。

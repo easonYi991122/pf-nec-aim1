@@ -42,3 +42,10 @@ def test_documented_aim1b_card_and_raw_adapters(monkeypatch):
     result = json.loads((config.RUN_ROOT / 'aim1b_diagnostics.json').read_text())
     assert result['index_stays'] == 120
     assert len(result['diagnostics']) > 0
+
+
+def test_documented_team_single_fit_apply():
+    examples = blocks('docs/TEAM_USAGE.md')
+    assert examples == blocks('docs/en/TEAM_USAGE.md')
+    assert len(examples) == 1
+    exec(compile(examples[0], 'docs/TEAM_USAGE.md', 'exec'), {})

@@ -61,7 +61,7 @@ None passed the pre-specified promotion gate. These selection programs are not s
 
 ## Exploratory analyses and scaffolding
 
-[fact] I7's single-day model with 8 background / clock variables: post-op AUROC 0.693 [0.650, 0.731]; adding 13 current-state variables gives 0.717 [0.677, 0.753]. G-safe scored 0.737 on the same 3 repeats. The descriptive ratio `(0.693−0.5)/(0.737−0.5) ≈ 0.81` (about 81%) refers only to discrimination above chance. **This is a 3-repeat screen, with no paired test against G-safe.** The paired post-op B→B+S Δ is +0.0241 [0.0055, 0.0449]; that is a separate descriptive comparison, not a treatment effect. Sources: `DEEPER_QUESTION_zh.md`, `i7/report.md`, `r8/report.md`.
+[fact] I7's single-day model with 8 background / clock variables: post-op AUROC 0.693 [0.650, 0.731]; adding 13 current-state variables gives 0.717 [0.677, 0.753]. G-safe scored 0.737 on the same 3 repeats. **This is a 3-repeat screen, with no paired test against G-safe.** The paired post-op B→B+S Δ is +0.0241 [0.0055, 0.0449]; that is a separate descriptive comparison, not a treatment effect. Sources: `DEEPER_QUESTION_zh.md`, `i7/report.md`, `r8/report.md`.
 
 [fact] The 8 variables in B are listed below; “background” names a slice, not universal pre-op availability. `statscore` and `xclamptime` are masked pre-op and still require the frozen surgery-completion availability gate post-op. Sources: frozen spec `diagnostics.feature_slices.B` and the clock / masking rules in `legacy/build_v26.py`.
 
@@ -76,9 +76,23 @@ None passed the pre-specified promotion gate. These selection programs are not s
 |statscore|STAT surgical risk score; masked pre-op|
 |xclamptime|Cross-clamp time; masked pre-op|
 
-[fact] I7 learning curves: descriptive mean post-op AUROC slopes per doubling of training cases are LGB 0.0305 [0.0115, 0.0489] and TCN 0.0295 [0.0165, 0.0419]. History-window and order gains did not reach the detectable threshold; this does not prove history is uninformative or guarantee benefit from more data. TCN versus an orderless MLP at POD0–2 gave +0.0416 [0.0092, 0.0752], without correction across POD strata. PI-29 curve / order results remain valid, but only sampling / statistical methods can be reused here, not those model fits. Sources: `i7/report.md`, `ROUND_REDO_summary_zh.md`.
+[fact] I7 learning curves: descriptive mean post-op AUROC slopes per doubling of training cases are LGB 0.0305 [0.0115, 0.0489] and TCN 0.0295 [0.0165, 0.0419]. History-window and order gains did not reach the detectable threshold; this does not prove history is uninformative or guarantee benefit from more data. At POD0–2, TCN versus an orderless MLP gave +0.0416 [0.0092, 0.0752] and versus the w7-R1 tree gave −0.0026; the former is not the largest of 16 sequence cells, with +0.0462 versus the w7-R1 tree at POD8–14. None has across-POD multiplicity correction. PI-29 curve / order results remain valid, but only sampling / statistical methods can be reused here, not those model fits. Sources: `i7/report.md`, `ROUND_REDO_summary_zh.md`.
 
-[fact] T3: the two reported Task A models emphasise STAT, cross-clamp time and ventilation; arterial lines are absent from their post-op top five concepts. Evidence of arterial-line reliance comes from PI72-CLEAN (R10); drug and VIS permutation losses of approximately 0 also refer only to PI72-CLEAN, because Task A’s design did not perform permutation analysis. Code encodings matter for G-safe; STAT is not first in every model. In PI72-CLEAN, the historical PI29 surgical-location feature `AllOperations_procloc_9` had a 16.3% share at POD0–2. Importance measures model reliance, not treatment effects; altered-input scores are not effects either. Comparison with the manuscript's importance ranking remains incomplete. Historical PI-29 attributions remain valid but cannot be rerun here. Sources: `r10/report.md`, `r11/report.md`, `ROUND_REDO_summary_zh.md`.
+[fact] T3: the two reported Task A models emphasise STAT, cross-clamp time and ventilation; arterial lines are absent from their post-op top five concepts. Evidence of arterial-line reliance comes from PI72-CLEAN (R10); drug and VIS permutation losses of approximately 0 also refer only to PI72-CLEAN, because Task A’s design did not perform permutation analysis. Code encodings matter for G-safe; STAT is not first in every model. In PI72-CLEAN, the historical PI29 surgical-location feature `AllOperations_procloc_9` (ProcLoc 9 = Cardiac OR) had a 16.3% share at POD0–2. Importance measures model reliance, not treatment effects; altered-input scores are not effects either. Comparison with the manuscript's importance ranking remains incomplete. Historical PI-29 attributions remain valid but cannot be rerun here. Sources: `r10/report.md`, `r11/report.md`, `ROUND_REDO_summary_zh.md`.
+
+## Historical evidence and corrections (aggregates only)
+
+Each entry retains its original contract and validation identity; no patient values are shown. Describe site-held-out and stay-split results separately without subtraction; POD cells are not new independent confirmation.
+
+|Historical configuration / cell|Original value or correction|Source section name|
+|---|---|---|
+|E9-A-D5-site; harness v3, 1×5 leave-site-out|AUROC 0.6950 [0.6732, 0.7174]; distinct from stay splits|Run registry: E9-A-D5-site, site sensitivity (DEC-007 step 6)|
+|TCN − ORDERLESS_MLP; POD0–2|+0.0416; not the largest sequence cell|I7 “POD-matched gains”|
+|TCN − w7-R1 tree; POD0–2|−0.0026|I7 “POD-matched gains”|
+|TCN − w7-R1 tree; POD8–14|+0.0462; 16 sequence cells inspected, without across-POD correction|I7 “POD-matched gains”|
+|M1 menu; r1 GRU-D|Included GAIN50; selected GAIN50-w7|M1 addendum profile menu; r1 choices / GRUD-WINDOW|
+
+I7 rows use the historical source-feature recipe, not results achieved by the new GAIN50 program; trimming the M1 menu also does not confirm the original program.
 
 ## Phase composition and historical identities
 

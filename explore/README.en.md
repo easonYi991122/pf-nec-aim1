@@ -7,10 +7,12 @@
 |T3 `explore.t3.interpret` / `t3_fast`|Grouped SHAP, time attribution, trajectory statistics; `gsafe_t3.packets(engine, output)` checks fixed predictions against saved models and creates in-memory packets|Assemble all Task A folds / repeats; lead needs independently checked event_day, not merely packet day; save aggregates only|
 |I7 `explore.i7.diagnostics`|8-background-variable and B+C / B+S / B+C+S slices, windows 1 or 7; learning_curve_stays and learning_slopes retain methods|Original PI-29 curves cannot be rerun; freeze new-model curves separately; see GLOSSARY for B/C/S|
 |Aim 1b `stage12` / `stage34`|Measurement, eligibility, positivity, aggregate card evidence, trial / DAG drafts and discussion ranking|PI review of readiness, time zero, actions, unmeasured confounding and effect protocol; no effect estimation|
+|team `explore.team.inputs` / `sequence` / `sequence_m1`|Training-pool GAIN50 from D5-safe; new-identity single fit and label-free apply|Freeze complete drivers, T-3 rows / receipts, joint-family and alert adapters; see [TEAM_USAGE](../docs/en/TEAM_USAGE.md)|
+
 
 I7 executable entry: `python -m explore.i7.diagnostics --repeat 1 --arm B-only-w1`, after build-data. Receipts are under `PF_RUN_DIR/explore-i7/<context>/`. Run each of the 3 screen repeats separately; this command only trains and saves predictions, not an accepted report or promotion conclusion. Use `pf_nec.inference.single_arm_intervals` for evaluation, taking targets independently from slice_provider test metadata.
 
-TCN / GRU, orderless-control and M1/GPU training code are excluded; attempted results are in RESULTS. [suggestion] Pause architecture searches; consider reopening only if the use discussion changes the primary metric, or new data / information plus a pre-frozen hypothesis justify a new study. Importance alone cannot justify reopening; the conditions match [STATUS_AND_NEXT](../docs/en/STATUS_AND_NEXT.md).
+Historical full sequence / M1 menus and scheduling are not shipped. `src/explore/team` ships new-identity GAIN50 single fit/apply interfaces for TCN / GRU, the orderless control and M1 learners. Complete new-task drivers remain unshipped; see [TEAM_TASKS](../docs/en/TEAM_TASKS.md) for boundaries and synthetic use. Main-line pausing and T-2/T-3 development under frozen cards follow [STATUS_AND_NEXT](../docs/en/STATUS_AND_NEXT.md); importance does not reopen searches.
 
 ## Aim 1b synthetic demonstration
 

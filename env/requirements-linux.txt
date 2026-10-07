@@ -10,3 +10,6 @@ threadpoolctl==3.7.0
 pytest==8.4.2
 matplotlib==3.9.4
 torch==2.8.0+cu128
+# Optional team learner dependencies; no installation is performed by the builder.
+tabm==0.0.3
+rtdl_num_embeddings==0.0.12

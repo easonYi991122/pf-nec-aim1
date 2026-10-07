@@ -16,7 +16,7 @@ def test_frozen_seed_and_excluded_arms():
     assert len(ev.frozen_family("PI72-CLEAN")) == 10
     assert len(ev.frozen_family("A-formal")) == 4
     assert len(c.D5SAFE) == 604
-    for recipe in ("PI10", "PI29", "SHADOW5"):
+    for recipe in ("PI10", "excluded-source-recipe", "SHADOW5"):
         with pytest.raises(c.ContractError):
             c.feature_columns(recipe)
     with pytest.raises(c.ContractError):

@@ -7,10 +7,12 @@
 |T3 `explore.t3.interpret` / `t3_fast`|分组 SHAP、时间归因、轨迹统计；`gsafe_t3.packets(engine, output)` 从保存模型核对固定预测并产生内存 packet|Task A 先组装完整各折、各重复；lead 需要独立核对的 event_day，packet 里的 day 不能替代事件日；仅保存汇总|
 |I7 `explore.i7.diagnostics`|8 背景变量、B+C / B+S / B+C+S 切片，窗口 1 或 7；learning_curve_stays、learning_slopes 保留方法|原 PI-29 曲线不能重跑；新模型曲线另冻结；B/C/S 见 GLOSSARY|
 |Aim 1b `stage12` / `stage34`|测量、资格、positivity、卡片证据合并、试验与 DAG 草案、讨论排序|准备度、时间零、动作含义、未测混杂与效应协议待 PI 确认；没有效应估计|
+|team `explore.team.inputs` / `sequence` / `sequence_m1`|D5-safe 内训练池 GAIN50；新身份的单次拟合及无标签应用|完整驱动、T-3 行集／回执、联合族和告警适配待冻结；见 [TEAM_USAGE](../docs/TEAM_USAGE.md)|
+
 
 I7 可执行入口：`python -m explore.i7.diagnostics --repeat 1 --arm B-only-w1`，需要先 build-data。结果回执在 `PF_RUN_DIR/explore-i7/<context>/`。完整 3 次 screen 须分别运行；该命令本身只训练并保存预测，不生成已接受报告或晋级结论。评价可用 `pf_nec.inference.single_arm_intervals`，targets 必须从 slice_provider 的独立 test 元数据取得。
 
-TCN／GRU、无序对照和 M1/GPU 训练代码不提供；已试结果见 RESULTS。〔建议〕结构类搜索暂停；仅在用途讨论改变主指标，或新数据／信息源与预先冻结的假设足以支持新研究时，才考虑重启。解释性重要性不能成为重启依据；条件同 [STATUS_AND_NEXT](../docs/STATUS_AND_NEXT.md)。
+历史完整序列／M1 菜单及调度不随包；`src/explore/team` 已提供新身份的 GAIN50 单次 fit/apply 接口，包含 TCN／GRU、无序对照及 M1 学习器。完整新任务驱动仍未提供，边界和合成使用见 [TEAM_TASKS](../docs/TEAM_TASKS.md)。主线暂停和冻结卡下 T-2/T-3 研发遵循 [STATUS_AND_NEXT](../docs/STATUS_AND_NEXT.md)；不以重要性重开搜索。
 
 ## Aim 1b 合成演示
 

@@ -28,7 +28,7 @@ class ContractError(ValueError):
 
 
 class ProvenanceError(ContractError):
-    """A source-PI29-dependent arm/program must remain incomplete."""
+    """An excluded source-model arm/program must remain incomplete."""
 
 
 def load_spec():
@@ -47,11 +47,11 @@ WINDOW_LENGTHS = tuple(SPEC["windows"]["lengths"])
 
 def feature_columns(recipe, *, selected=None, frame="PI72-CLEAN"):
     """Ordered fixed list, or a caller's fold-local GAIN/SHADOW list; never rank."""
-    if recipe in ("PI10", "PI29"):
+    if recipe == "PI10":
         raise ContractError("Source-model feature arms are excluded from this handoff")
     if frame not in FRAMES or recipe not in SPEC["feature_sets"]:
         raise ContractError("Unknown frame/feature recipe")
-    if frame == "A-formal" and (recipe in ("PI10", "PI29") or recipe.startswith("SHADOW")):
+    if frame == "A-formal" and (recipe == "PI10" or recipe.startswith("SHADOW")):
         raise ContractError("Task A does not use source PI lists or SHADOW")
     entry = SPEC["feature_sets"][recipe]
     if "selector" in entry:
